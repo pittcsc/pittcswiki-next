@@ -1,3 +1,5 @@
+"use client"
+
 /**
  * Header Component
  *
@@ -10,6 +12,7 @@ import Image from "next/image"
 
 import logo from "@/images/pantherhandbook-mini.svg"
 import Search from "./Search/Search"
+import ThemeToggle from "./ThemeToggle"
 
 const Header = (): JSX.Element => {
   return (
@@ -28,10 +31,11 @@ const Header = (): JSX.Element => {
           </Link>
         </div>
       </div>
-      <div className="w-full md:w-1/3 flex items-center">
+      <div className="w-full md:w-1/3 flex items-center gap-2">
         <div className="relative w-full">
           <Search />
         </div>
+        <ThemeToggle />
       </div>
     </header>
   )

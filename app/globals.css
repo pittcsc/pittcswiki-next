@@ -2,6 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode colors */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #eeeeee;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #666666;
+  --border-color: #dddddd;
+  --border-light: #eeeeee;
+  --accent-color: #243e8b;
+  --accent-hover: #1a2e66;
+  --link-color: #0066cc;
+  --link-hover: #0052a3;
+  --code-bg: #f0f0f0;
+  --code-text: #000000;
+  --shadow-sm: rgba(0, 0, 0, 0.05);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --success-bg: #d4edda;
+  --success-text: #155724;
+  --warning-bg: #fff3cd;
+  --warning-text: #856404;
+  --error-bg: #f8d7da;
+  --error-text: #721c24;
+}
+
+/* Dark mode colors */
+html.dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #b0b0b0;
+  --border-color: #404040;
+  --border-light: #333333;
+  --accent-color: #5b7fd6;
+  --accent-hover: #7a9ae8;
+  --link-color: #66b3ff;
+  --link-hover: #99ccff;
+  --code-bg: #2d2d2d;
+  --code-text: #e8e8e8;
+  --shadow-sm: rgba(0, 0, 0, 0.2);
+  --shadow-md: rgba(0, 0, 0, 0.4);
+  --success-bg: #1e3a1e;
+  --success-text: #90ee90;
+  --warning-bg: #3a3a1e;
+  --warning-text: #ffd700;
+  --error-bg: #3a1e1e;
+  --error-text: #ff6b6b;
+}
+
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -259,7 +311,8 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: var(--code-bg);
+  color: var(--code-text);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -344,7 +397,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--border-color);
   border: none;
   height: 1px;
 }
@@ -424,17 +477,17 @@ samp {
 }
 
 abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-tertiary);
   cursor: help;
 }
 
 acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-tertiary);
   cursor: help;
 }
 
 abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-tertiary);
   cursor: help;
   text-decoration: none;
 }
@@ -446,7 +499,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 1px solid var(--border-light);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -469,7 +522,8 @@ td:last-child {
 
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: var(--code-bg);
+  color: var(--code-text);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
@@ -516,6 +570,9 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .content {
@@ -530,6 +587,9 @@ body {
 
 blockquote {
   @apply pl-4 py-2 ml-0 border-l-8;
+  border-left-color: var(--accent-color);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
 :root {
@@ -596,29 +656,43 @@ blockquote {
 
   input {
     @apply mr-1;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
   }
 
   #term_offered {
     button {
       @apply mr-2;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      border-color: var(--border-color);
+      transition: background-color 0.2s ease;
 
       &:hover {
-        @apply bg-gray-200;
+        background-color: var(--bg-tertiary);
       }
 
       &.active {
-        @apply bg-blue-200;
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-hover);
       }
     }
   }
 
   label {
     @apply mr-2 h-full flex items-center px-2;
+    color: var(--text-primary);
   }
 }
 
 .course-pill {
   @apply rounded-full border w-32 mr-4 py-2 px-4 my-1 cursor-pointer text-center;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: all 0.2s ease;
 
   &:focus {
     outline: none;
@@ -631,7 +705,9 @@ blockquote {
 
   &:hover,
   &.selected {
-    @apply bg-gray-700 border-gray-800 text-white;
+    background-color: var(--accent-color);
+    border-color: var(--accent-hover);
+    color: white;
   }
 }
 
@@ -656,25 +732,33 @@ blockquote {
 
 .btn {
   @apply font-semibold py-2 px-2 border rounded;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: all 0.2s ease;
 
   &:hover {
-    @apply bg-gray-200 cursor-pointer;
+    background-color: var(--bg-tertiary);
+    cursor: pointer;
   }
 
   &.btn-blue:hover {
-    @apply bg-blue-400;
+    background-color: var(--accent-color);
+    color: white;
   }
 
   &.btn-purple {
-    @apply bg-purple-700 border-purple-900 text-white;
+    background-color: var(--accent-color);
+    border-color: var(--accent-hover);
+    color: white;
     &:hover {
-      @apply bg-purple-900;
+      background-color: var(--accent-hover);
     }
   }
 
   &:hover a,
   a:hover {
-    @apply text-white;
+    color: white;
   }
 
   &.small {
@@ -729,9 +813,18 @@ blockquote {
 }
 
 a {
-  @apply text-blue-500;
+  color: var(--link-color);
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  @apply text-blue-800;
+  color: var(--link-hover);
+}
+
+/* Hero Section with gradient fade to background color */
+.hero-section {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
 }

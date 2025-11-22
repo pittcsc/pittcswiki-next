@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { ThemeProvider } from "@/context/ThemeContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,11 +18,33 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'light';
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {
+                  console.error('Failed to initialize theme:', e);
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Header />
-        <div className="lg:w-[80vw] mx-auto container px-2">{children}</div>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <div className="lg:w-[80vw] mx-auto container px-2">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

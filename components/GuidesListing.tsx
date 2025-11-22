@@ -27,11 +27,11 @@ for (let guide of importedGuides) {
 
 const guides = posts.map((post, index) => (
   <Link
-    className="inline-block p-1 w-full text-gray-800 px-4 py-4 md:w-1/2"
+    className="inline-block p-1 w-full text-gray-800 dark:text-gray-200 px-4 py-4 md:w-1/2"
     href={post.href}
     key={`g_${index}`}
   >
-    <div className="border bg-gray-200 shadow-sm h-64 p-4 transition hover:bg-gray-600 hover:text-white hover:shadow-md">
+    <div className="border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 shadow-sm h-64 p-4 transition hover:bg-gray-600 dark:hover:bg-gray-700 hover:text-white hover:shadow-md rounded-lg">
       <h1>{post.title}</h1>
       <div>{post.guides_blurb}</div>
     </div>

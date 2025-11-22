@@ -25,6 +25,11 @@ const initialNodes = [
     position,
   },
   {
+    id: "441",
+    data: { label: "CS 441" },
+    position,
+  },
+  {
     id: "445",
     data: { label: "CS 445" },
     position,
@@ -58,6 +63,7 @@ const initialNodes = [
 
 export const initialEdges = [
   { id: "e12", source: "401", target: "445", type: edgeType, animated: false },
+  { id: "e11", source: "401", target: "441", type: edgeType, animated: false },
   { id: "e13", source: "445", target: "447", type: edgeType, animated: true },
   {
     id: "e22a",
@@ -69,7 +75,7 @@ export const initialEdges = [
   { id: "e22b", source: "447", target: "449", type: edgeType, animated: true },
   {
     id: "e22c",
-    source: "445",
+    source: "441",
     target: "1502",
     type: edgeType,
     animated: false,

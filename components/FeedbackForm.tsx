@@ -73,7 +73,7 @@ const FeedbackForm = ({ setFormState, show }: FeedbackFormProps) => {
         <input hidden name="location" onChange={handleChange} />
         <div
           style={{ bottom: "60px" }}
-          className="absolute flex flex-col justify-between border bg-white shadow-md h-64 p-3 w-full"
+          className="absolute flex flex-col justify-between border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-900 h-64 p-3 w-full text-black dark:text-white"
         >
           <div className="text-left">
             <span> Rate your experience</span>

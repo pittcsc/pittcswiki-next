@@ -65,7 +65,7 @@ const WikiArticle = ({
           <div className={"my-8 sm:w-full md:w-auto"}>
             <FeedbackWidget />
           </div>
-          <div className="flex justify-between text-sm text-gray-600">
+          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
             <EditOnGithub slug={path} isIndexPage={false} />
             {lastUpdatedString && !lastUpdatedString.includes("Invalid") && (
               <div className="text-right">

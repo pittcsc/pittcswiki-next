@@ -35,13 +35,13 @@ const CourseQuickViewContent = ({
       <div className="mt-4 mb-2">
         <RequirementsListing requirements={COURSE_REQUIREMENTS[id]} />
       </div>
-      <p className="text-xs overflow-auto">
+      <p className="text-xs overflow-auto text-gray-700 dark:text-gray-300">
         {description && description.length > 850
           ? description?.substring(0, 800) + "…"
           : description}
       </p>
       <Link
-        className="font-semibold btn btn-blue hover:text-white border-blue-200 p-2 text-center mt-auto"
+        className="font-semibold btn btn-blue hover:text-white border-blue-200 dark:border-blue-700 p-2 text-center mt-auto"
         href={`/courses/${id}`}
       >
         View student reviews
