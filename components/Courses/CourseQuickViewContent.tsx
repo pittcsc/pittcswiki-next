@@ -40,12 +40,6 @@ const CourseQuickViewContent = ({
           ? description?.substring(0, 800) + "…"
           : description}
       </p>
-      <Link
-        className="font-semibold btn btn-blue hover:text-white border-blue-200 p-2 text-center mt-auto"
-        href={`/courses/${id}`}
-      >
-        View student reviews
-      </Link>
     </>
   )
 }

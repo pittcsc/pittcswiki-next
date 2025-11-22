@@ -47,7 +47,7 @@ const WikiArticle = ({
 
   return (
     <>
-      <TableOfContents headings={headingsArray} />
+      {/* <TableOfContents headings={headingsArray} />
       <Breadcrumb slug={path} />
       <div className="blog-post-container">
         <div className="blog-post mb-8">
@@ -58,9 +58,9 @@ const WikiArticle = ({
             )}
           </div>
           <FreshnessDisclaimer lastUpdated={gitAuthorTime} />
-          <div className="mt-4 blog-post-content">
-            <Markdown remarkPlugins={[remarkGfm]}>{relevantContent}</Markdown>
-          </div>
+          <div className="mt-4 blog-post-content"> */}
+      <Markdown remarkPlugins={[remarkGfm]}>{relevantContent}</Markdown>
+      {/* </div>
           <RelatedGuides related={frontmatter.related} />
           <div className={"my-8 sm:w-full md:w-auto"}>
             <FeedbackWidget />
@@ -74,7 +74,7 @@ const WikiArticle = ({
             )}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
