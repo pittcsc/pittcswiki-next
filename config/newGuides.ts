@@ -7,7 +7,8 @@
  */
 
 export const newGuides = [
-  "career/running-for-officer", // Running for a PittCSC Officer Position - NEW
+  "career/running-for-officer", // Running for PittCSC Officer - NEW
+  "career/working-at-startup", // Working at a Startup - NEW
 ]
 
 export const updatedGuides = [

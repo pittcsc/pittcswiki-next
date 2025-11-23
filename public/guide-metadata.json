@@ -453,6 +453,20 @@
     "readingTime": 9,
     "commits": 3
   },
+  "guide-career/working-at-startup": {
+    "path": "career/working-at-startup",
+    "author": "Unknown",
+    "authorEmail": "",
+    "originalAuthor": "Unknown",
+    "originalAuthorEmail": "",
+    "updaters": [],
+    "updaterEmails": [],
+    "lastModified": "2025-11-23T20:52:52.954Z",
+    "created": "2025-11-23T20:52:52.954Z",
+    "wordCount": 1732,
+    "readingTime": 9,
+    "commits": 0
+  },
   "guide-skills/clubs": {
     "path": "skills/clubs",
     "author": "Steven Jarmell",

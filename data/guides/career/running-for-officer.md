@@ -1,5 +1,5 @@
 ---
-title: "Running for a PittCSC Officer Position"
+title: "Running for PittCSC Officer"
 guides_blurb: "Interested in leading the Pitt Computer Science Club? Here's everything you need to know about running for an officer position."
 search_tags: ["officer", "leadership", "election", "csc", "volunteering", "responsibility", "involvement"]
 ---

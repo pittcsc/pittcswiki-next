@@ -71,15 +71,6 @@ const WikiArticle = ({
                     <span className="font-semibold hidden sm:inline">Written by:</span>
                     <span>{metadata.originalAuthor || metadata.author}</span>
                   </div>
-                  {metadata.updaters && metadata.updaters.length > 0 && (
-                    <>
-                      <span className="hidden sm:inline text-gray-400">•</span>
-                      <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
-                        <span className="font-semibold hidden sm:inline">Updated by:</span>
-                        <span>{metadata.updaters.join(", ")}</span>
-                      </div>
-                    </>
-                  )}
                   <span className="hidden sm:inline text-gray-400">•</span>
                   <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
                     <span className="hidden sm:inline">Published</span>
@@ -97,6 +88,12 @@ const WikiArticle = ({
                     />
                   </div>
                 </div>
+                {metadata.updaters && metadata.updaters.length > 0 && (
+                  <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-2">
+                    <span className="font-semibold">Updated by:</span>
+                    <span>{metadata.updaters.join(", ")}</span>
+                  </div>
+                )}
               </div>
             )}
           </header>
