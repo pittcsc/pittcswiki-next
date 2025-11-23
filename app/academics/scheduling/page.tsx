@@ -1,8 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import InteractiveCourseGraph from "@/components/Courses/InteractiveCourseGraph"
+import dynamic from "next/dynamic"
 import CourseDetailsModal from "@/components/Courses/CourseDetailsModal"
+
+const InteractiveCourseGraph = dynamic(
+  () => import("@/components/Courses/InteractiveCourseGraph"),
+  { ssr: false }
+)
 import { CoreCoursesData, CoreCourseData } from "@/data/CoreCoursesData"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -217,13 +222,13 @@ export default function SchedulingPage() {
           {/* Introduction Text */}
           <div className="mb-12 bg-white p-8 rounded-lg border border-gray-200">
             <p className="text-gray-700 text-base leading-relaxed">
-              Let's look at the core CS classes required for the major. It might
+              Let&rsquo;s look at the core CS classes required for the major. It might
               look intimidating at first, but it just shows the requirements of
               classes. For example, to take CS 1501, you must take CS 441 and CS
               445.
             </p>
             <p className="text-gray-700 text-base leading-relaxed mt-4">
-              The dashed lines mean those classes are "coreqs". For example, you
+              The dashed lines mean those classes are &ldquo;coreqs&rdquo;. For example, you
               can take CS 449 if you are taking CS 447 in the semester. But, you
               cannot take CS 449 before CS 447.
             </p>

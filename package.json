@@ -25,6 +25,7 @@
     "sharp": "^0.33.0"
   },
   "devDependencies": {
+    "@types/dagre": "^0.7.53",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

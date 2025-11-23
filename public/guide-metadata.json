@@ -293,13 +293,17 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": [],
-    "updaterEmails": [],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 1887,
+    "wordCount": 1888,
     "readingTime": 10,
-    "commits": 3
+    "commits": 4
   },
   "guide-career/freshman-sophomore-opportunities": {
     "path": "career/freshman-sophomore-opportunities",

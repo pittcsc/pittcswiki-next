@@ -30,7 +30,7 @@ export default function SearchResults({
       {!isLoading && results.length === 0 && (
         <div className="p-4 text-center">
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            No results found for "{query}"
+            No results found for &ldquo;{query}&rdquo;
           </p>
           <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">
             Try searching for course codes (e.g., CS 0401) or guide topics

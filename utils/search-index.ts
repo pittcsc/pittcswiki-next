@@ -122,7 +122,10 @@ export const buildSearchIndex = async (): Promise<SearchIndex> => {
         const id = `guide-${relativePath}`
         const title = frontmatter.title || "Untitled Guide"
         const description = extractDescription(fileContent)
-        const searchableText = `${title} ${description} ${frontmatter.search_tags?.join(" ") || ""}`.toLowerCase()
+        const tagsString = Array.isArray(frontmatter.search_tags)
+          ? frontmatter.search_tags.join(" ")
+          : ""
+        const searchableText = `${title} ${description} ${tagsString}`.toLowerCase()
 
         results.push({
           id,

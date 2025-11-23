@@ -9,6 +9,7 @@ import {
   useNodesState,
   useEdgesState,
   Node,
+  Position,
 } from "@xyflow/react"
 import dagre from "@dagrejs/dagre"
 import { CoreCoursesData, CoreCourseData } from "@/data/CoreCoursesData"
@@ -163,12 +164,13 @@ export const mathEdges = [
 
 export const initialEdges = csEdges
 
-const dagreGraph = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}))
-
 const nodeWidth = 110
 const nodeHeight = 40
 
 const getLayoutedElements = (nodes: Node[], edges: any[], direction = "TB") => {
+  // Create dagreGraph inside function to ensure it runs on client side only
+  const dagreGraph = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}))
+
   const isHorizontal = direction === "LR"
   dagreGraph.setGraph({ rankdir: direction, align: "UL", nodesep: 50, ranksep: 60 })
 
@@ -184,10 +186,17 @@ const getLayoutedElements = (nodes: Node[], edges: any[], direction = "TB") => {
 
   const newNodes = nodes.map((node) => {
     const nodeWithPosition = dagreGraph.node(node.id)
-    const newNode = {
+    if (!nodeWithPosition || nodeWithPosition.x === undefined || nodeWithPosition.y === undefined) {
+      return node
+    }
+
+    const targetPos: Position = isHorizontal ? Position.Left : Position.Top
+    const sourcePos: Position = isHorizontal ? Position.Right : Position.Bottom
+
+    const newNode: Node = {
       ...node,
-      targetPosition: isHorizontal ? "left" : "top",
-      sourcePosition: isHorizontal ? "right" : "bottom",
+      targetPosition: targetPos,
+      sourcePosition: sourcePos,
       position: {
         x: nodeWithPosition.x - nodeWidth / 2,
         y: nodeWithPosition.y - nodeHeight / 2,
@@ -200,11 +209,6 @@ const getLayoutedElements = (nodes: Node[], edges: any[], direction = "TB") => {
   return { nodes: newNodes, edges }
 }
 
-const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-  initialNodes,
-  initialEdges
-)
-
 type InteractiveCourseGraphProps = {
   onCourseClick: (courseId: string) => void
   selectedCourse: string | null
@@ -216,6 +220,12 @@ const InteractiveCourseGraph: React.FC<InteractiveCourseGraphProps> = ({
   selectedCourse,
   showMathPrereqs = false,
 }) => {
+  // Calculate layout on client side only
+  const { nodes: layoutedNodes, edges: layoutedEdges } = React.useMemo(
+    () => getLayoutedElements(initialNodes, initialEdges),
+    []
+  )
+
   const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges)
 
