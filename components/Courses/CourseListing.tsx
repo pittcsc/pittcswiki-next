@@ -41,7 +41,7 @@ const CourseListing = ({
     <div>
       <div className="my-4 content-center course-controls flex-none hidden md:block">
         <button
-          className="btn"
+          className="btn filter-button"
           onClick={() => setShowCourseFilters(!showCourseFilters)}
         >
           {(showCourseFilters ? "Hide" : "Show") + " Course Filter Controls"}

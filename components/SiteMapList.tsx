@@ -42,7 +42,7 @@ const CardView = ({ tree }: any) => {
       {tree.href && (
         <a
           href={tree.href}
-          className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:bg-gray-600 hover:font-bold hover:shadow-md"
+          className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
         >
           {tree.title}
         </a>
@@ -53,7 +53,7 @@ const CardView = ({ tree }: any) => {
           <a
             key={child.id}
             href={child.href}
-            className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:text-white hover:bg-gray-600 hover:font-bold hover:shadow-md"
+            className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
           >
             {child.title}
           </a>

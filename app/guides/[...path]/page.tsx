@@ -4,8 +4,11 @@ import WikiArticle from "@/components/WikiArticle"
 import { notFound } from "next/navigation"
 import { sortStrings } from "@/utils/sort-strings"
 import { promises as fs } from "fs"
+import path from "path"
 import Markdown from "react-markdown"
 import { GetFolderInformation } from "@/utils/guides-page-helper"
+import { getGuideStatus } from "@/config/newGuides"
+import { loadGuideMetadataServer, GuideMetadata } from "@/utils/guide-metadata"
 
 export type FileTitlesType = {
   title: string
@@ -19,20 +22,36 @@ export default async function GuidePage({
 }) {
   const curPath = decodeURIComponent(params.path.join("/"))
 
+  // Validate path to prevent directory traversal attacks
+  const safeBasePath = path.resolve(process.cwd(), "data/guides")
+  const safePath = path.resolve(safeBasePath, curPath)
+  if (!safePath.startsWith(safeBasePath + path.sep)) {
+    notFound()
+  }
+
   // Render the file
   if (curPath.includes(".md")) {
     // Import file
     let curFile = null
     try {
-      curFile = await fs.readFile(
-        process.cwd() + `/data/guides/${curPath}`,
-        "utf-8"
-      )
+      curFile = await fs.readFile(safePath, "utf-8")
     } catch (e) {
       notFound()
     }
 
     const fileFrontMatter = getMDFrontMatter(curFile)
+
+    // Extract guide ID for metadata lookup
+    const guideId = `guide-${curPath.replace(/\.(md|mdx)$/, "")}`
+
+    // Load metadata if available
+    let metadata = undefined
+    try {
+      const allMetadata = await loadGuideMetadataServer()
+      metadata = allMetadata[guideId]
+    } catch (error) {
+      console.error("Error loading guide metadata:", error)
+    }
 
     return (
       <WikiArticle
@@ -41,6 +60,7 @@ export default async function GuidePage({
         frontmatter={fileFrontMatter}
         gitAuthorTime=""
         lastUpdatedString=""
+        metadata={metadata}
       />
     )
   }
@@ -49,10 +69,12 @@ export default async function GuidePage({
   // Based on the name, dynamically import the index.md file for it
   let pageIndexFile
   try {
-    pageIndexFile = await fs.readFile(
-      process.cwd() + `/data/guides/${curPath}/index.md`,
-      "utf-8"
-    )
+    const indexPath = path.resolve(safePath, "index.md")
+    // Ensure the index file is still within the allowed directory
+    if (!indexPath.startsWith(safeBasePath + path.sep)) {
+      notFound()
+    }
+    pageIndexFile = await fs.readFile(indexPath, "utf-8")
   } catch (e) {
     notFound()
   }
@@ -68,24 +90,55 @@ export default async function GuidePage({
   return (
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
-      <div className="blog-post-container">
+      <div className={`blog-post-container ${curPath === 'career' ? 'career-page' : ''}`}>
         <div className="blog-post mb-8">
           <div className="frontmatter">
-            <h1 className="title">{indexFileFrontMatter.title}</h1>
-            <Markdown>{relevantContent}</Markdown>
+            <h1 className={`title ${curPath === 'career' ? 'career-title' : ''}`}>{indexFileFrontMatter.title}</h1>
+            <div className={curPath === 'career' ? 'career-description' : ''}>
+              <Markdown>{relevantContent}</Markdown>
+            </div>
             <h3>Guides</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {fileTitles
                 .sort(sortStrings)
-                .map((file: FileTitlesType, i: number) => (
-                  <a
-                    key={i}
-                    href={file.href}
-                    className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:text-white hover:bg-gray-600 hover:font-bold hover:shadow-md"
-                  >
-                    {file.title}
-                  </a>
-                ))}
+                .map((file: FileTitlesType, i: number) => {
+                  // Extract guide slug from href (e.g., "guides/career/running-for-officer.md" -> "running-for-officer")
+                  let guideSlug = file.href.split("/").pop() || ""
+                  // Remove .md or .mdx extension
+                  guideSlug = guideSlug.replace(/\.(md|mdx)$/, "")
+                  const categorySlug = curPath.split("/").pop() || ""
+                  const guideStatus = getGuideStatus(categorySlug, guideSlug)
+
+                  return (
+                    <div key={i} className="guide-card-container">
+                      <a
+                        href={file.href}
+                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5 block"
+                        aria-label={
+                          guideStatus
+                            ? `${file.title} (${guideStatus} guide)`
+                            : file.title
+                        }
+                      >
+                        {file.title}
+                      </a>
+                      {guideStatus === "new" && (
+                        <div
+                          className="new-ribbon"
+                          aria-label="New guide"
+                          role="img"
+                        />
+                      )}
+                      {guideStatus === "updated" && (
+                        <div
+                          className="updated-ribbon"
+                          aria-label="Updated guide"
+                          role="img"
+                        />
+                      )}
+                    </div>
+                  )
+                })}
             </div>
           </div>
         </div>

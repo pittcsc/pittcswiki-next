@@ -14,7 +14,7 @@ export default function CoursesPage() {
       <h1>Courses</h1>
       <p>
         If you are new to the CS classes,{" "}
-        <span className="ml-2 bg-yellow-300 px-2 py-1">
+        <span className="scheduling-guide-highlight ml-2">
           we suggest viewing our{" "}
           <Link href="/academics/scheduling">scheduling guide</Link>!
         </span>

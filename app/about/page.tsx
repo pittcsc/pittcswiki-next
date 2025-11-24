@@ -34,6 +34,7 @@ export default function AboutPage() {
 
         <p>Hope its helpful.</p>
         <i>Created by: The 2019 Pitt CSC Officers</i>
+        <p></p>
         <i>Updated by: The 2025 Pitt CSC Officers</i>
       </div>
     </>
