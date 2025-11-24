@@ -29,20 +29,52 @@ export default async function GuidePage({
     notFound()
   }
 
-  // Render the file
-  if (curPath.includes(".md")) {
-    // Import file
-    let curFile = null
+  // Try to render as a file (with .md or .mdx extension)
+  let curFile = null
+  let actualFilePath = curPath
+
+  // If path doesn't already have an extension, try both .md and .mdx
+  if (!curPath.includes(".md")) {
+    const mdPath = path.resolve(safeBasePath, curPath + ".md")
+    const mdxPath = path.resolve(safeBasePath, curPath + ".mdx")
+
+    // Check if .md file exists
     try {
-      curFile = await fs.readFile(safePath, "utf-8")
+      if ((await fs.stat(mdPath)).isFile()) {
+        curFile = await fs.readFile(mdPath, "utf-8")
+        actualFilePath = curPath + ".md"
+      }
     } catch (e) {
-      notFound()
+      // File doesn't exist, continue
     }
 
+    // If .md doesn't exist, try .mdx
+    if (!curFile) {
+      try {
+        if ((await fs.stat(mdxPath)).isFile()) {
+          curFile = await fs.readFile(mdxPath, "utf-8")
+          actualFilePath = curPath + ".mdx"
+        }
+      } catch (e) {
+        // File doesn't exist, continue to folder logic
+      }
+    }
+  } else {
+    // Path already has an extension, try to read it directly
+    try {
+      curFile = await fs.readFile(safePath, "utf-8")
+      actualFilePath = curPath
+    } catch (e) {
+      // File doesn't exist
+    }
+  }
+
+  // Render as a file if we found one
+  if (curFile) {
     const fileFrontMatter = getMDFrontMatter(curFile)
 
     // Extract guide ID for metadata lookup
-    const guideId = `guide-${curPath.replace(/\.(md|mdx)$/, "")}`
+    const guideId = `guide-${actualFilePath.replace(/\.(md|mdx)$/, "")}`
 
     // Load metadata if available
     let metadata = undefined
@@ -56,7 +88,7 @@ export default async function GuidePage({
     return (
       <WikiArticle
         file={curFile}
-        path={"guides/" + curPath}
+        path={"guides/" + actualFilePath}
         frontmatter={fileFrontMatter}
         gitAuthorTime=""
         lastUpdatedString=""
