@@ -253,7 +253,7 @@ const InteractiveCourseGraph: React.FC<InteractiveCourseGraphProps> = ({
           eds
         )
       ),
-    []
+    [setEdges]
   )
 
   const onNodeClick = useCallback(

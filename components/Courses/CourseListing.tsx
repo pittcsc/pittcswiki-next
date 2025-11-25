@@ -26,25 +26,16 @@ export type CourseListingState = {
 
 const COURSE_FILTERS_KEY = "pittcs-course-filters"
 
-const getDefaultTermFilter = () => {
-  const month = new Date().getMonth()
-  if (month >= 0 && month <= 4) return "SPRING"
-  if (month >= 5 && month <= 7) return "SUMMER"
-  return "FALL"
-}
-
 const CourseListing = ({
   courseList,
   courseCategories,
 }: CourseListingProps) => {
-  const defaultTerm = useMemo(() => getDefaultTermFilter(), [])
-
   const [state, setState] = useState<CourseListingState>(() => ({
     currentCourse: { id: "" },
-    showTitles: true,
+    showTitles: false,
     showHidden: false,
     isPrereqFilterModeOn: false,
-    termOfferedFilter: defaultTerm,
+    termOfferedFilter: "OFF",
     searchTerm: "",
   }))
 
@@ -59,7 +50,7 @@ const CourseListing = ({
         setState((prev) => ({
           ...prev,
           ...parsed,
-          termOfferedFilter: parsed.termOfferedFilter || defaultTerm,
+          termOfferedFilter: parsed.termOfferedFilter || "OFF",
         }))
       }
     } catch (error) {
@@ -67,7 +58,7 @@ const CourseListing = ({
     } finally {
       setHasHydratedFilters(true)
     }
-  }, [defaultTerm])
+  }, [])
 
   useEffect(() => {
     if (!hasHydratedFilters || typeof window === "undefined") return
@@ -87,6 +78,7 @@ const CourseListing = ({
     state.isPrereqFilterModeOn,
     state.termOfferedFilter,
     hasHydratedFilters,
+    state,
   ])
 
   return (

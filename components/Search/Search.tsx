@@ -46,15 +46,22 @@ const Search = () => {
   }
 
   return (
-    <div 
-      ref={containerRef} 
+    <div
+      ref={containerRef}
       className="relative flex-1 max-w-xs search-container"
       role="search"
       aria-label="Site search"
     >
-      <div className="search-input-wrapper relative flex items-center">
-        <label 
-          htmlFor="search-bar" 
+      <div
+        className="search-input-wrapper relative flex items-center"
+        role="combobox"
+        aria-haspopup="listbox"
+        aria-owns="search-results"
+        aria-controls="search-results"
+        aria-expanded={isOpen}
+      >
+        <label
+          htmlFor="search-bar"
           className="search-icon-wrapper absolute left-0 z-10 pointer-events-none"
           aria-hidden="true"
         >
@@ -87,8 +94,6 @@ const Search = () => {
           aria-label="Search courses, articles, or topics"
           aria-autocomplete="list"
           aria-controls="search-results"
-          aria-expanded={isOpen}
-          aria-describedby={isOpen ? "search-results" : undefined}
           autoComplete="off"
         />
         {query && (
@@ -99,12 +104,12 @@ const Search = () => {
             type="button"
             tabIndex={0}
           >
-            <svg 
-              width="18" 
-              height="18" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react"
 import { CourseListingState } from "./CourseListing"
+import { Search } from "lucide-react"
 
 type ToggleKey = "showTitles" | "isPrereqFilterModeOn" | "showHidden"
 
@@ -38,70 +39,82 @@ const CourseControls = ({ filters, setFilters }: CourseControlsProps) => {
   const renderToggle = (label: string, name: ToggleKey) => (
     <button
       type="button"
-      className={`toggle-switch ${filters[name] ? "active" : ""}`}
-      aria-pressed={filters[name]}
       onClick={() => handleToggle(name)}
+      className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 ${filters[name] ? "bg-blue-600" : "bg-gray-200 dark:bg-gray-700"
+        }`}
+      role="switch"
+      aria-checked={filters[name]}
+      aria-label={label}
     >
-      <span className="toggle-indicator" aria-hidden="true" />
-      <span className="toggle-label">{label}</span>
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${filters[name] ? "translate-x-5" : "translate-x-0"
+          }`}
+      />
     </button>
   )
 
   return (
-    <div className="filter-bar" role="region" aria-label="Course filters">
-      <div className="filter-group filter-search">
-        <label htmlFor="course-search" className="filter-label">
-          Search courses
-        </label>
+    <div className="mb-8 flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-[#1a1a1a] lg:flex-row lg:items-center lg:justify-between">
+      {/* Search Section */}
+      <div className="relative w-full lg:w-72">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <Search className="h-5 w-5 text-gray-400" aria-hidden="true" />
+        </div>
         <input
-          id="course-search"
           type="search"
           placeholder="Search courses..."
           value={filters.searchTerm}
           onChange={handleSearchChange}
-          className="filter-input"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
       </div>
-      <div className="filter-group filter-semester">
-        <span className="filter-label">Semester:</span>
-        <div className="pill-group" role="group" aria-label="Filter by semester">
-          {termOptions.map(({ value, label }) => (
+
+      {/* Filters Section */}
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+        {/* Semester Filter */}
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Semester:
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {termOptions.map(({ value, label }) => (
+              <button
+                key={value}
+                onClick={() => handleSetTermOffered(value)}
+                className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${filters.termOfferedFilter === value
+                    ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                  }`}
+              >
+                {label}
+              </button>
+            ))}
             <button
-              type="button"
-              key={value}
-              className={`pill-button ${
-                filters.termOfferedFilter === value ? "active" : ""
-              }`}
-              onClick={() => handleSetTermOffered(value)}
-              aria-pressed={filters.termOfferedFilter === value}
+              onClick={clearTermFilter}
+              className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${filters.termOfferedFilter === "OFF"
+                  ? "bg-gray-800 text-white dark:bg-white dark:text-gray-900"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                }`}
             >
-              {label}
+              All
             </button>
-          ))}
-          <button
-            type="button"
-            className={`pill-button clear ${
-              filters.termOfferedFilter === "OFF" ? "active" : ""
-            }`}
-            onClick={clearTermFilter}
-            aria-pressed={filters.termOfferedFilter === "OFF"}
-          >
-            All
-          </button>
-        </div>
-      </div>
-      <div className="filter-group filter-toggles">
-        <div className="toggle-section">
-          <span className="filter-label">Display:</span>
-          <div className="toggle-stack">
-            {renderToggle("Course titles", "showTitles")}
           </div>
         </div>
-        <div className="toggle-section">
-          <span className="filter-label">Options:</span>
-          <div className="toggle-stack">
-            {renderToggle("Requirements filter", "isPrereqFilterModeOn")}
-            {renderToggle("Hidden classes", "showHidden")}
+
+        {/* Toggles */}
+        <div className="flex flex-wrap items-center gap-6">
+          <div className="flex items-center gap-2">
+            {renderToggle("Show Titles", "showTitles")}
+            <span className="text-sm text-gray-700 dark:text-gray-300">Titles</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {renderToggle("Requirements Filter", "isPrereqFilterModeOn")}
+            <span className="text-sm text-gray-700 dark:text-gray-300">Reqs</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {renderToggle("Show Hidden", "showHidden")}
+            <span className="text-sm text-gray-700 dark:text-gray-300">Hidden</span>
           </div>
         </div>
       </div>
