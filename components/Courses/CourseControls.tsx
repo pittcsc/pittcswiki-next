@@ -66,7 +66,7 @@ const CourseControls = ({ filters, setFilters }: CourseControlsProps) => {
           placeholder="Search courses..."
           value={filters.searchTerm}
           onChange={handleSearchChange}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-[rgba(255,255,255,0.2)] dark:bg-[rgba(255,255,255,0.12)] dark:text-white dark:placeholder-gray-400 dark:focus:border-[#FFB81C] dark:focus:ring-[#FFB81C] backdrop-blur-md"
         />
       </div>
 
@@ -83,8 +83,8 @@ const CourseControls = ({ filters, setFilters }: CourseControlsProps) => {
                 key={value}
                 onClick={() => handleSetTermOffered(value)}
                 className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${filters.termOfferedFilter === value
-                    ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                  ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                   }`}
               >
                 {label}
@@ -93,8 +93,8 @@ const CourseControls = ({ filters, setFilters }: CourseControlsProps) => {
             <button
               onClick={clearTermFilter}
               className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${filters.termOfferedFilter === "OFF"
-                  ? "bg-gray-800 text-white dark:bg-white dark:text-gray-900"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+                ? "bg-gray-800 text-white dark:bg-white dark:text-gray-900"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
                 }`}
             >
               All

@@ -19,6 +19,7 @@ type CourseQuickViewContentProps = {
   description?: string
   title?: string
   terms_offered?: TermsOfferedType
+  instructors?: string[]
 }
 
 const CourseQuickViewContent = ({
@@ -26,11 +27,18 @@ const CourseQuickViewContent = ({
   description,
   title,
   terms_offered,
+  instructors,
 }: CourseQuickViewContentProps) => {
   return (
     <>
       <h1 className="mb-2">{cleanCourseId(id)}</h1>
       <h2 className="mb-2">{cleanCourseTitle(title ? title : "")}</h2>
+      {instructors && instructors.length > 0 && (
+        <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
+          <span className="font-semibold">Current Professor:</span>{" "}
+          {instructors.join(", ")}
+        </p>
+      )}
       {terms_offered && <TermPills termsMap={terms_offered} />}
       <div className="mt-4 mb-2">
         <RequirementsListing requirements={COURSE_REQUIREMENTS[id]} />
@@ -40,12 +48,7 @@ const CourseQuickViewContent = ({
           ? description?.substring(0, 800) + "…"
           : description}
       </p>
-      <Link
-        className="font-semibold btn btn-blue hover:text-white border-blue-200 dark:border-blue-700 p-2 text-center mt-auto"
-        href={`/courses/${id}`}
-      >
-        View student reviews
-      </Link>
+
     </>
   )
 }

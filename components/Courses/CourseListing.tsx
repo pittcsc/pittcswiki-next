@@ -111,7 +111,7 @@ const CourseListing = ({
           isPrereqFilterModeOn={true}
         />
       </div>
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col-reverse md:flex-row items-start">
         <div className="md:w-2/3 md:pr-1">
           <CourseInteractiveListing
             filters={state}
@@ -125,13 +125,13 @@ const CourseListing = ({
         <div
           className="md:w-1/3 hidden md:flex flex-col sticky top-0"
           style={{
-            height: "70vh",
+            height: "auto",
             top: "2rem",
             minWidth: "25rem",
-            maxHeight: "45rem",
+            maxHeight: "35rem",
           }}
         >
-          <div className="flex flex-col h-full p-8 shadow-xl border rounded br-8">
+          <div className="flex flex-col p-8 shadow-xl border rounded br-8 dark:bg-[rgba(255,255,255,0.12)] dark:border-[rgba(255,255,255,0.2)] backdrop-blur-md">
             <CourseQuickView {...state.currentCourse}>
               <div>
                 <h3>Click a course on the left to see details</h3>

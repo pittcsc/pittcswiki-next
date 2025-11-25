@@ -28,10 +28,10 @@
   --success-text: #155724;
   --warning-bg: #fff3cd;
   --warning-text: #856404;
-  --error-bg: #f8d7da;
+  --error-bg: #180f10;
   --error-text: #721c24;
-  --transition-fast: 200ms ease;
-  --transition-base: 300ms ease;
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Dark mode colors - refined for better readability and warmth */
@@ -62,8 +62,8 @@ html.dark {
   --warning-text: #ffd700;
   --error-bg: #3a1e1e;
   --error-text: #ff6b6b;
-  --transition-fast: 200ms ease;
-  --transition-base: 300ms ease;
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --footer-bg: #1a1a1a;
   --footer-text: #a0a0a0;
   --footer-link: #fbbf24;
@@ -453,13 +453,13 @@ ul li {
   padding-left: 0;
 }
 
-li > ol {
+li>ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li > ul {
+li>ul {
   margin-left: 1.45rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -473,7 +473,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li > p {
+li>p {
   margin-bottom: 1px;
   line-height: 1.6;
 }
@@ -566,6 +566,7 @@ tt:after {
 }
 
 nav {
+
   ul,
   li {
     list-style-type: none;
@@ -587,7 +588,7 @@ pre tt:after {
 
 html {
   background-color: var(--bg-primary);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: background-color;
 }
 
@@ -598,61 +599,60 @@ body {
   flex-direction: column;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
   will-change: background-color, color;
 }
 
 /* Ensure consistent background throughout page */
 main {
   background-color: var(--bg-primary);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
 /* Synchronized transitions for theme-dependent elements */
 footer {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base) !important;
 }
 
 footer * {
-  transition: color 0.3s ease !important;
+  transition: color var(--transition-base) !important;
 }
 
 footer a {
-  transition: color 0.3s ease !important;
+  transition: color var(--transition-base) !important;
 }
 
 .container {
   padding: 0 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Ensure all direct children of body transition smoothly to prevent staggered loading */
-body > * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+body>* {
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
 /* Explicit transitions for container wrapper to sync with body background */
 .lg\:w-\[80vw\] {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Ensure all layout containers transition simultaneously */
 .mx-auto {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Ensure html element background transitions in sync with body */
 html {
   background-color: var(--bg-primary);
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-base);
 }
 
 /* Force immediate synchronous transitions for theme changes */
 html.dark,
 html:not(.dark) {
   background-color: var(--bg-primary);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: background-color var(--transition-base);
 }
 
 .content {
@@ -770,7 +770,8 @@ blockquote {
 }
 
 .sidebar-nav-link:hover {
-  color: #FFB81C; /* Yellow hover for consistency */
+  color: #FFB81C;
+  /* Yellow hover for consistency */
 }
 
 .sidebar-nav-link.active {
@@ -787,13 +788,15 @@ blockquote {
 }
 
 .sidebar-subsection a:hover {
-  color: #FFB81C; /* Yellow hover for consistency */
+  color: #FFB81C;
+  /* Yellow hover for consistency */
 }
 
 /* Sidebar Navigation Dark Mode Styling */
 /* Section headers (Recruiters 101, Resume Basics, etc.) */
 html.dark .sidebar-section-header {
-  color: #ffffff; /* Pure white for main headers */
+  color: #ffffff;
+  /* Pure white for main headers */
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -804,13 +807,15 @@ html.dark .sidebar-section-header a {
 
 /* Navigation links */
 html.dark .sidebar-nav-link {
-  color: #b0b0b0; /* Lighter gray for better readability */
+  color: #b0b0b0;
+  /* Lighter gray for better readability */
   font-weight: 400;
   transition: color 0.2s ease;
 }
 
 html.dark .sidebar-nav-link:hover {
-  color: #FFB81C; /* Yellow hover for consistency */
+  color: #FFB81C;
+  /* Yellow hover for consistency */
 }
 
 /* Active/current page link */
@@ -821,7 +826,8 @@ html.dark .sidebar-nav-link.active {
 
 /* Subsection items (if any) */
 html.dark .sidebar-subsection {
-  color: #9ca3af; /* Slightly dimmer for hierarchy */
+  color: #9ca3af;
+  /* Slightly dimmer for hierarchy */
   padding-left: 12px;
 }
 
@@ -830,7 +836,8 @@ html.dark .sidebar-subsection a {
 }
 
 html.dark .sidebar-subsection a:hover {
-  color: #FFB81C; /* Yellow hover for consistency */
+  color: #FFB81C;
+  /* Yellow hover for consistency */
 }
 
 /* Ensure proper spacing between sections */
@@ -1194,6 +1201,7 @@ html.dark .toggle-indicator::after {
     background-color: var(--accent-color);
     border-color: var(--accent-hover);
     color: white;
+
     &:hover {
       background-color: var(--accent-hover);
       box-shadow: 0 6px 16px rgba(91, 127, 214, 0.4);
@@ -1223,16 +1231,14 @@ html.dark .toggle-indicator::after {
     box-shadow: 0 6px 16px rgba(255, 184, 28, 0.3);
     transition: all var(--transition-base);
     background-size: 30px 30px;
-    background-image: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.04) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(0, 0, 0, 0.04) 50%,
-      rgba(0, 0, 0, 0.04) 75%,
-      transparent 75%,
-      transparent
-    );
+    background-image: linear-gradient(45deg,
+        rgba(0, 0, 0, 0.04) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.04) 50%,
+        rgba(0, 0, 0, 0.04) 75%,
+        transparent 75%,
+        transparent);
     animation: stripes 1s linear 0s infinite normal none running;
   }
 
@@ -1351,9 +1357,11 @@ html.dark .card:hover {
   0% {
     background-color: var(--bg-secondary);
   }
+
   50% {
     background-color: var(--bg-tertiary);
   }
+
   100% {
     background-color: var(--bg-secondary);
   }
@@ -1516,6 +1524,7 @@ a:focus-visible {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1527,6 +1536,7 @@ a:focus-visible {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1538,6 +1548,7 @@ a:focus-visible {
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1549,6 +1560,7 @@ a:focus-visible {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -1556,9 +1568,12 @@ a:focus-visible {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -1568,6 +1583,7 @@ a:focus-visible {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -1629,6 +1645,7 @@ a:focus-visible {
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1695,6 +1712,7 @@ a:focus-visible {
     opacity: 0;
     transform: rotate(-45deg) translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: rotate(-45deg) translateX(0);
@@ -1715,14 +1733,17 @@ html.dark .guide-card-container .updated-ribbon::before {
 /* Career Page Dark Mode Styling */
 /* Dark mode page styling */
 html.dark .career-page {
-  background-color: #0f0f0f; /* Consistent dark background */
+  background-color: #0f0f0f;
+  /* Consistent dark background */
   color: #ffffff;
 }
 
 /* Dark mode cards */
 html.dark .guide-card {
-  background-color: #2a2a2a; /* Light enough to stand out */
-  border: 1px solid #404040 !important; /* Subtle border for definition */
+  background-color: #2a2a2a;
+  /* Light enough to stand out */
+  border: 1px solid #404040 !important;
+  /* Subtle border for definition */
   color: #ffffff !important;
 }
 
@@ -1744,7 +1765,8 @@ html.dark .career-description {
 /* Zero to Offer link styling in dark mode */
 html.dark .career-description a,
 html.dark .zero-to-offer-link {
-  color: #FFB81C; /* Use Pitt gold for important links */
+  color: #FFB81C;
+  /* Use Pitt gold for important links */
 }
 
 html.dark .career-description a:hover,
@@ -1764,18 +1786,18 @@ html.dark .guide-card:hover h3 {
 }
 
 /* Consistent hover effects for guide card titles */
-a > div h1 {
+a>div h1 {
   transition: text-decoration 0.2s ease;
 }
 
-a > div:hover h1 {
+a>div:hover h1 {
   text-decoration: underline;
   text-decoration-color: #FFB81C;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
-html.dark a > div:hover h1 {
+html.dark a>div:hover h1 {
   text-decoration-color: #FFB81C;
 }
 
@@ -1785,7 +1807,8 @@ html.dark .breadcrumb-nav {
 }
 
 html.dark .breadcrumb-nav a {
-  color: #FFB81C; /* Gold for active links */
+  color: #FFB81C;
+  /* Gold for active links */
 }
 
 html.dark .breadcrumb-nav a:hover {
@@ -1793,47 +1816,61 @@ html.dark .breadcrumb-nav a:hover {
 }
 
 html.dark .breadcrumb-nav span {
-  color: #888888; /* Gray for separators and current page */
+  color: #888888;
+  /* Gray for separators and current page */
 }
 
 /* Courses Page Highlighting Styling */
 /* Adaptive Highlighting System - Light Mode (Subtle Beige/Tan Background with Dark Text) */
 .scheduling-guide-highlight {
-  background-color: #FFF8E1 !important; /* Very light yellow/beige background */
-  color: #1a1a1a !important; /* Dark text for maximum readability */
-  border: 2px solid #FFB81C !important; /* Yellow border for visibility */
-  padding: 8px 16px;
+  background-color: #FFF8E1 !important;
+  /* Very light yellow/beige background */
+  color: #1a1a1a !important;
+  /* Dark text for maximum readability */
+  border: 2px solid #FFB81C !important;
+  /* Yellow border for visibility */
+  padding: 2px 4px;
   border-radius: 4px;
 }
 
 .scheduling-guide-highlight a {
-  color: #0052a3 !important; /* Blue link color for better contrast */
+  color: #0052a3 !important;
+  /* Blue link color for better contrast */
   text-decoration: underline;
-  font-weight: 600; /* Slightly bolder for visibility */
+  font-weight: 600;
+  /* Slightly bolder for visibility */
 }
 
 .scheduling-guide-highlight a:hover {
-  color: #003594 !important; /* Darker blue on hover */
+  color: #003594 !important;
+  /* Darker blue on hover */
+  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
 /* Adaptive Highlighting System - Dark Mode */
 html.dark .scheduling-guide-highlight {
-  background-color: #FFB800 !important; /* Yellow background */
+  background-color: #FFB800 !important;
+  /* Yellow background */
   border: 1px solid #FFB81C;
-  color: #000000 !important; /* Black text for maximum contrast */
-  padding: 8px 16px;
+  color: #000000 !important;
+  /* Black text for maximum contrast */
+  padding: 2px 4px;
   border-radius: 4px;
 }
 
 html.dark .scheduling-guide-highlight a {
-  color: #000000 !important; /* Black link color for contrast */
+  color: #000000 !important;
+  /* Black link color for contrast */
   text-decoration: underline;
-  font-weight: 600; /* Slightly bolder for visibility */
+  font-weight: 600;
+  /* Slightly bolder for visibility */
 }
 
 html.dark .scheduling-guide-highlight a:hover {
-  color: #1a1a1a !important; /* Slightly lighter black on hover */
+  color: #1a1a1a !important;
+  /* Slightly lighter black on hover */
+  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
@@ -1871,38 +1908,47 @@ html.dark .career-page .frontmatter {
 
 /* Header Styling */
 header.header {
-  height: 64px; /* Slightly reduced from original for better proportion */
-  padding: 0 24px; /* Increased padding for breathing room */
+  height: 64px;
+  /* Slightly reduced from original for better proportion */
+  padding: 0 24px;
+  /* Increased padding for breathing room */
   display: flex;
-  align-items: center; /* Vertically center all items */
+  align-items: center;
+  /* Vertically center all items */
   justify-content: space-between;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow for separation */
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Subtle shadow for separation */
   position: relative;
   z-index: 10;
 }
 
 /* Make header background match page background exactly in dark mode */
 html.dark header.header {
-  background-color: #0f0f0f !important; /* Match exact page background color */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for dark mode */
+  background-color: #0f0f0f !important;
+  /* Match exact page background color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow for dark mode */
 }
 
 /* Logo container with fixed height for predictable centering */
 .header-logo {
   display: flex;
   align-items: center;
-  height: 40px; /* Set fixed height for predictable centering */
+  height: 40px;
+  /* Set fixed height for predictable centering */
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 0; /* Remove gap, use margin-right on search container for spacing */
+  gap: 0;
+  /* Remove gap, use margin-right on search container for spacing */
 }
 
 .pitt-logo {
-  height: 36px; /* Increased by ~12% from 32px for better visual balance */
+  height: 36px;
+  /* Increased by ~12% from 32px for better visual balance */
   width: auto;
   transition: transform 0.2s ease;
 }
@@ -1913,7 +1959,8 @@ html.dark header.header {
 
 /* Search Bar Styling - Modern Redesign with 8px Grid System */
 .search-container {
-  width: 180px; /* Width to fit "Search..." placeholder text exactly */
+  width: 180px;
+  /* Width to fit "Search..." placeholder text exactly */
   max-width: 100%;
   position: relative;
 }
@@ -1921,19 +1968,22 @@ html.dark header.header {
 .search-input-wrapper {
   position: relative;
   width: 100%;
-  height: 40px; /* 8px grid: 40px = 5 units */
+  height: 40px;
+  /* 8px grid: 40px = 5 units */
   display: flex;
   align-items: center;
 }
 
 /* Target the Search component in header */
-.header-right > div {
-  width: 180px; /* Width to fit "Search..." placeholder text exactly */
+.header-right>div {
+  width: 180px;
+  /* Width to fit "Search..." placeholder text exactly */
   max-width: 100%;
-  margin-right: 16px; /* Give breathing room before the moon icon */
+  margin-right: 16px;
+  /* Give breathing room before the moon icon */
 }
 
-.header-right > div .search-input-wrapper {
+.header-right>div .search-input-wrapper {
   height: 40px;
   width: 100%;
 }
@@ -1941,26 +1991,32 @@ html.dark header.header {
 .search-input {
   width: 100%;
   height: 40px;
-  padding: 8px 40px 8px 40px; /* 8px grid: left padding for icon, right for clear button */
-  border-radius: 8px; /* Consistent border radius */
+  padding: 8px 40px 8px 40px;
+  /* 8px grid: left padding for icon, right for clear button */
+  border-radius: 8px;
+  /* Consistent border radius */
   border: 1px solid rgba(0, 0, 0, 0.12);
   background-color: rgba(255, 255, 255, 0.95);
-  color: #1a1a1a; /* WCAG AA: 4.5:1 contrast ratio */
+  color: #1a1a1a;
+  /* WCAG AA: 4.5:1 contrast ratio */
   font-size: 14px;
   line-height: 1.5;
   font-family: inherit;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none; /* Remove elevation to blend into navbar */
+  box-shadow: none;
+  /* Remove elevation to blend into navbar */
 }
 
 .search-input::placeholder {
-  color: rgba(0, 0, 0, 0.6); /* WCAG AA compliant */
+  color: rgba(0, 0, 0, 0.6);
+  /* WCAG AA compliant */
   font-weight: 400;
 }
 
 .search-input:hover {
   border-color: rgba(0, 0, 0, 0.2);
-  box-shadow: none; /* Keep no shadow on hover to blend */
+  box-shadow: none;
+  /* Keep no shadow on hover to blend */
 }
 
 .search-input:focus {
@@ -1973,7 +2029,8 @@ html.dark header.header {
 
 .search-icon-wrapper {
   position: absolute;
-  left: 12px; /* 8px grid: 12px = 1.5 units */
+  left: 12px;
+  /* 8px grid: 12px = 1.5 units */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -1997,7 +2054,8 @@ html.dark header.header {
 
 .search-clear-button {
   position: absolute;
-  right: 8px; /* 8px grid */
+  right: 8px;
+  /* 8px grid */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -2041,18 +2099,20 @@ html.dark header.header {
     width: 100%;
     max-width: 180px;
   }
-  
-  .header-right > div {
+
+  .header-right>div {
     width: 100%;
     max-width: 180px;
   }
-  
+
   header.header {
-    padding: 0 12px; /* 8px grid: 12px = 1.5 units */
+    padding: 0 12px;
+    /* 8px grid: 12px = 1.5 units */
   }
-  
+
   .header-right {
-    gap: 8px; /* 8px grid */
+    gap: 8px;
+    /* 8px grid */
   }
 }
 
@@ -2060,11 +2120,11 @@ html.dark header.header {
   .search-container {
     max-width: 180px;
   }
-  
-  .header-right > div {
+
+  .header-right>div {
     max-width: 180px;
   }
-  
+
   .search-input {
     font-size: 13px;
   }
@@ -2080,6 +2140,7 @@ html.dark header.header {
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2102,6 +2163,7 @@ html.dark header.header {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .search-input,
   .search-clear-button,
   .theme-toggle-button,
@@ -2117,28 +2179,35 @@ html.dark .search-input {
   height: 40px !important;
   padding: 8px 40px 8px 40px !important;
   border-radius: 8px !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Visible border */
-  background-color: rgba(255, 255, 255, 0.12) !important; /* Glassmorphism background */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  /* Visible border */
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  /* Glassmorphism background */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: #ffffff !important; /* WCAG AA: 4.5:1 contrast ratio */
+  color: #ffffff !important;
+  /* WCAG AA: 4.5:1 contrast ratio */
   font-size: 14px;
-  box-shadow: none !important; /* Remove elevation to blend into navbar */
+  box-shadow: none !important;
+  /* Remove elevation to blend into navbar */
 }
 
 html.dark .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7) !important; /* WCAG AA compliant */
+  color: rgba(255, 255, 255, 0.7) !important;
+  /* WCAG AA compliant */
 }
 
 html.dark .search-input:hover {
   background-color: rgba(255, 255, 255, 0.16) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
-  box-shadow: none !important; /* Keep no shadow on hover to blend */
+  box-shadow: none !important;
+  /* Keep no shadow on hover to blend */
 }
 
 html.dark .search-input:focus {
   background-color: rgba(255, 255, 255, 0.2) !important;
-  border-color: #FFB81C !important; /* Gold border on focus */
+  border-color: #FFB81C !important;
+  /* Gold border on focus */
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 184, 28, 0.15), 0 2px 8px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
@@ -2172,8 +2241,9 @@ html.dark .search-clear-button:hover {
   border: none;
   background: none;
   padding: 0;
-  color: rgba(255, 255, 255, 0.8); /* Match search icon color */
-  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  /* Match search icon color */
+  transition: opacity var(--transition-base), transform var(--transition-base), color var(--transition-base);
   position: relative;
 }
 
@@ -2208,7 +2278,8 @@ html.dark .search-clear-button:hover {
 
 /* Dark mode styling */
 html.dark .theme-toggle-button {
-  color: rgba(255, 255, 255, 0.8); /* Match search icon color in dark mode */
+  color: rgba(255, 255, 255, 0.8);
+  /* Match search icon color in dark mode */
 }
 
 html.dark .theme-toggle-button:hover {
@@ -2230,7 +2301,8 @@ html.dark .theme-toggle-button:hover {
 
 /* Sun icon in dark mode - filled with gold, keep stroke for rays */
 html.dark .theme-toggle-button svg {
-  fill: #FFB81C; /* Gold color for sun icon */
+  fill: #FFB81C;
+  /* Gold color for sun icon */
   stroke: #FFB81C;
   color: #FFB81C;
 }
@@ -2262,8 +2334,10 @@ html.dark .theme-toggle-button svg {
 .article-container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto; /* Center when used standalone */
-  padding: 0 24px; /* Responsive padding for standalone use */
+  margin: 0 auto;
+  /* Center when used standalone */
+  padding: 0 24px;
+  /* Responsive padding for standalone use */
 }
 
 /* Responsive padding for standalone article-container */
@@ -2281,9 +2355,12 @@ html.dark .theme-toggle-button svg {
 
 /* Override styles when article-container is inside article-layout-wrapper */
 .article-layout-wrapper .article-container {
-  margin: 0; /* Remove auto margins in flex layout */
-  padding: 0; /* Padding handled by wrapper */
-  flex: 0 0 800px; /* Fixed width for content centering */
+  margin: 0;
+  /* Remove auto margins in flex layout */
+  padding: 0;
+  /* Padding handled by wrapper */
+  flex: 0 0 800px;
+  /* Fixed width for content centering */
   max-width: 800px;
 }
 
@@ -2299,16 +2376,20 @@ html.dark .theme-toggle-button svg {
 
 /* Override breadcrumb styles when inside article-layout-wrapper */
 .article-layout-wrapper .breadcrumb-nav {
-  margin: 0 0 32px 0; /* Remove auto margins in flex layout */
-  padding: 0; /* Padding handled by wrapper */
+  margin: 0 0 32px 0;
+  /* Remove auto margins in flex layout */
+  padding: 0;
+  /* Padding handled by wrapper */
 }
 
 .breadcrumb-nav a {
-  color: #243e8b; /* Pitt blue for links in light mode */
+  color: #243e8b;
+  /* Pitt blue for links in light mode */
 }
 
 .breadcrumb-nav span {
-  color: #888888; /* Gray for separators and current page */
+  color: #888888;
+  /* Gray for separators and current page */
 }
 
 /* Article Header Spacing */

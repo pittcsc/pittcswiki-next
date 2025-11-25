@@ -28,7 +28,7 @@ const LinkPanelItem = ({
   return (
     <Link
       href={path}
-      className="link-panel-item text-center text-sm text-black dark:text-gray-100 hover:cursor-pointer bg-white dark:bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg transition-all duration-300 overflow-hidden focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C] flex flex-col h-64 w-full md:flex-shrink-0 hover:scale-[1.02]"
+      className="link-panel-item text-center text-sm text-black dark:text-gray-100 hover:cursor-pointer bg-white dark:bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C] flex flex-col h-64 w-full md:flex-shrink-0 hover:scale-[1.02] hover:shadow-xl hover:no-underline hover:text-[#243e8b] hover:border-[#243e8b] dark:hover:border-[#FFB81C] dark:hover:shadow-none dark:hover:text-gray-100"
       style={{
         boxShadow: 'rgba(0, 0, 0, 0.08) 0px 2px 12px, rgba(0, 0, 0, 0.04) 0px 1px 4px'
       }}

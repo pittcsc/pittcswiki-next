@@ -42,22 +42,24 @@ const CardView = ({ tree }: any) => {
       {tree.href && (
         <a
           href={tree.href}
-          className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
+          className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] dark:hover:border-l-[#FFB81C] hover:text-[#243e8b] dark:hover:text-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
         >
           {tree.title}
         </a>
       )}
-      {tree.children &&
+      {
+        tree.children &&
         tree.href !== "/courses/" &&
         tree.children.sort(sortAlphaByTitle).map((child: any) => (
           <a
             key={child.id}
             href={child.href}
-            className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
+            className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] dark:hover:border-l-[#FFB81C] hover:text-[#243e8b] dark:hover:text-[#FFB81C] hover:shadow-md hover:-translate-y-0.5"
           >
             {child.title}
           </a>
-        ))}
+        ))
+      }
     </>
   )
 }
