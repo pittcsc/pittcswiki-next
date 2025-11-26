@@ -2,7 +2,119 @@
 title: "Working at a Startup"
 ---
 
-Startups offer a unique environment that's fundamentally different from both traditional internships and big tech companies. If you're considering a startup role, it's important to understand what you're getting into—the pros, the cons, and how to succeed in this fast-paced ecosystem.
+Whether you want to start something at Pitt or join a company in its early stages, getting into the startup world can be a tough landscape to navigate. The goal of this page is to be a starting point for anyone interested into getting into startups.
+
+**Page contents:**
+
+1. What is a startup?
+
+2. Pros of a startup
+
+3. Cons of a startup
+
+4. Startup vs big tech
+
+5. Getting into startups
+
+6. Starting your own startup
+
+7. Funding
+
+8. Startup lingo
+
+## 1. What is a startup?
+
+A startup can be anything from a group of friends making a website for their local community to a large AI tech company valued at billions of dollars.
+
+To put it simply:
+> A startup is a young company, often with a tech-based, innovative idea, that is in the process of being developed to scale quickly and disrupt an industry.
+
+## 2. Pros of a startup
+
+TODO: Make these charts?
+
+As both an intern and a full time employee:
+
+* At a startup, you will learn **a lot**. Since it's so fast paced, you might be working on something different every two weeks. Touching so many different areas casts a wide range of learning. You are of course able to express interest in different areas of work you want to pick up.
+
+* At a startup, there is much higher ownership. You will be expected to own certain features or systems, which means you will have to build, maintain, and answer questions about these systems that sometimes take entire teams in larger companies. This quickly builds initiative and leadership skills. Note that ownership can sometimes be hard to get early in your career.
+
+* You can learn more how a company *operates*. At a startup, higher ups are usually one or two links away. You can see how executives operate on a day to day basis while also seeing other processes like legal/recruiting/marketing all at the same time. It's hard to describe, but its like drinking company concentrate, instead of a regular soup
+
+* Startups are likely in SF
+
+* You can wear different hats
+
+* Compensation is usually very competitive, and rewards very hard work.
+
+* Networking feels very authentic (within the company, not in SF)
+
+Intern specific:
+
+* You're a real employee. Your work is needed
+
+* You have more freedom than a larger company. Like using the company card or being able to get some FT benefits.
+
+Full time specific:
+
+* Title inflation (depending how you look at it)
+
+* So much freedom, so many casual events, and surrounded by younger people who like to work hard and get lit (sometimes).
+
+## 3. Cons of a startup
+
+As an intern:
+
+* If its your junior year internship, it might be harder to get a full time big tech job if you decide you don't like startups and you're not coming from a big tech background. Key words: **it might be**. It's definitely doable.
+
+* Less work life balance, but you're still an intern so like no one really expects you to be putting in crazy hours. (Although you might be inclined to sacrifice your own work life balance because you see people around you at the startup do the same as an intern. Beware, its a slippery slope.)
+
+As a full time employee:
+
+* Less work life balance
+* Less job security
+* Equity could be worth nothing
+
+## 4. Startup vs big tech
+
+* Startup org structure
+* More ownership at a startup
+* Less beauracracy at a startup
+* More freedom at a startup
+* More influence at a startup
+* More work to be hard a startup
+* Less work life balance overall
+
+## 5. Getting into startups
+
+* Networking
+* The YC website
+* Cold emailing
+  * Probably a little note about how holistic background matters. Keep it real and how startup people are looking for driven people with interesting backgrounds.
+* Events like greylock's techfair
+* See starting your own
+
+## 6. Starting your own startup
+
+It's not about the idea... well it is... but its mainly how many times you can try an idea, fail, then try again.
+
+## 7. Funding
+
+TODO: Add more i can't think of anymore off the top of my head :(
+
+* YC
+* Pitt Innovation center
+
+
+## 8. Startup lingo
+
+Funding rounds
+
+* Series A, B, C...
+* Seed round, pre-seed round
+* Options
+* Runway
+* Burn
 
 ## How Startups Differ from Traditional Internships
 
@@ -223,6 +335,9 @@ Before committing, evaluate these factors:
 
 ## Resources
 
+Unironically some of these aren't bad
+TODO: Fix this
+
 ### Startup Job Boards
 - **AngelList (Wellfound)** - https://wellfound.com/
 - **Y Combinator Job Board** - https://www.ycombinator.com/jobs
@@ -248,8 +363,4 @@ Before committing, evaluate these factors:
 
 ## Final Thoughts
 
-Working at a startup is a unique experience that can accelerate your growth as an engineer and give you perspective on how real companies work. It's not for everyone—some people thrive in the chaos and ambiguity, while others find it stressful and demotivating.
-
-The key is to go in with open eyes. Understand what you're signing up for, evaluate the opportunity carefully, and decide if it aligns with your current goals and risk tolerance. A startup can be an amazing stepping stone in your career, but only if it's the right fit for you.
-
-If you do decide to join one, embrace the challenge, stay curious, and don't be afraid to ask for help. You're building something that didn't exist before—that's pretty cool.
+TODO: Add final thoughts
