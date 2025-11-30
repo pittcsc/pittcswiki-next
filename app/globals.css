@@ -453,13 +453,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -473,7 +473,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: 1px;
   line-height: 1.6;
 }
@@ -566,7 +566,6 @@ tt:after {
 }
 
 nav {
-
   ul,
   li {
     list-style-type: none;
@@ -639,7 +638,7 @@ footer a {
 }
 
 /* Ensure all direct children of body transition smoothly to prevent staggered loading */
-body>* {
+body > * {
   transition:
     background-color var(--transition-base),
     color var(--transition-base),
@@ -1253,14 +1252,16 @@ html.dark .toggle-indicator::after {
     box-shadow: 0 6px 16px rgba(255, 184, 28, 0.3);
     transition: all var(--transition-base);
     background-size: 30px 30px;
-    background-image: linear-gradient(45deg,
-        rgba(0, 0, 0, 0.04) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(0, 0, 0, 0.04) 50%,
-        rgba(0, 0, 0, 0.04) 75%,
-        transparent 75%,
-        transparent);
+    background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.04) 50%,
+      rgba(0, 0, 0, 0.04) 75%,
+      transparent 75%,
+      transparent
+    );
     animation: stripes 1s linear 0s infinite normal none running;
   }
 
@@ -1593,7 +1594,6 @@ a:focus-visible {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -1670,7 +1670,6 @@ a:focus-visible {
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1811,18 +1810,18 @@ html.dark .guide-card:hover h3 {
 }
 
 /* Consistent hover effects for guide card titles */
-a>div h1 {
+a > div h1 {
   transition: text-decoration 0.2s ease;
 }
 
-a>div:hover h1 {
+a > div:hover h1 {
   text-decoration: underline;
   text-decoration-color: #ffb81c;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
-html.dark a>div:hover h1 {
+html.dark a > div:hover h1 {
   text-decoration-color: #ffb81c;
 }
 
@@ -2004,7 +2003,7 @@ html.dark header.header {
 }
 
 /* Target the Search component in header */
-.header-right>div {
+.header-right > div {
   width: 180px;
   /* Width to fit "Search..." placeholder text exactly */
   max-width: 100%;
@@ -2012,7 +2011,7 @@ html.dark header.header {
   /* Give breathing room before the moon icon */
 }
 
-.header-right>div .search-input-wrapper {
+.header-right > div .search-input-wrapper {
   height: 40px;
   width: 100%;
 }
@@ -2131,7 +2130,7 @@ html.dark header.header {
     max-width: 180px;
   }
 
-  .header-right>div {
+  .header-right > div {
     width: 100%;
     max-width: 180px;
   }
@@ -2152,7 +2151,7 @@ html.dark header.header {
     max-width: 180px;
   }
 
-  .header-right>div {
+  .header-right > div {
     max-width: 180px;
   }
 
@@ -2194,7 +2193,6 @@ html.dark header.header {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-
   .search-input,
   .search-clear-button,
   .theme-toggle-button,
