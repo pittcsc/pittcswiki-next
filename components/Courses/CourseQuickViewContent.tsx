@@ -48,7 +48,6 @@ const CourseQuickViewContent = ({
           ? description?.substring(0, 800) + "…"
           : description}
       </p>
-
     </>
   )
 }

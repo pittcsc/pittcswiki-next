@@ -31,8 +31,10 @@ const guides = posts.map((post, index) => (
     href={post.href}
     key={`g_${index}`}
   >
-    <div className="border border-gray-300 dark:border-[#404040] bg-gray-200 dark:bg-[#2a2a2a] shadow-sm h-64 p-4 transition-all duration-300 ease-in-out hover:border-[#243e8b] hover:text-[#243e8b] dark:hover:border-[#FFB81C] dark:hover:bg-[#333333] hover:shadow-xl hover:-translate-y-0.5 rounded-lg group">
-      <h1 className="dark:text-white group-hover:dark:text-[#FFB81C] transition-colors duration-200">{post.title}</h1>
+    <div className="border border-gray-300 dark:border-[#404040] bg-gray-200 dark:bg-[#2a2a2a] shadow-sm h-64 p-4 transition-all duration-300 ease-in-out hover:border-[#243e8b] hover:text-[#243e8b] dark:hover:bg-[#333333] hover:shadow-xl hover:-translate-y-0.5 rounded-lg group">
+      <h1 className="dark:text-white transition-colors duration-200">
+        {post.title}
+      </h1>
       <div className="dark:text-gray-300">{post.guides_blurb}</div>
     </div>
   </Link>

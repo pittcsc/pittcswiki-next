@@ -148,11 +148,9 @@ const CourseListing = ({
       </div>
       <p className="text-sm italic">
         This page is dynamically pulled from{" "}
-        <a href="https://courses.sci.pitt.edu/courses">
-          courses.sci.pitt.edu
-        </a>{" "}
-        on a weekly frequency. In the case of a mistake or error, look at
-        Pitt{"'"}s official website and/or check PeopleSoft.
+        <a href="https://courses.sci.pitt.edu/courses">courses.sci.pitt.edu</a>{" "}
+        on a weekly frequency. In the case of a mistake or error, look at Pitt
+        {"'"}s official website and/or check PeopleSoft.
       </p>
     </div>
   )

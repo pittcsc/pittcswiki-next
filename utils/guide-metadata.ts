@@ -25,12 +25,12 @@ export type AllGuideMetadata = {
  */
 export async function loadGuideMetadataServer(): Promise<AllGuideMetadata> {
   try {
-    const metadataPath = path.join(process.cwd(), "public/guide-metadata.json");
-    const content = await fs.readFile(metadataPath, "utf-8");
-    return JSON.parse(content);
+    const metadataPath = path.join(process.cwd(), "public/guide-metadata.json")
+    const content = await fs.readFile(metadataPath, "utf-8")
+    return JSON.parse(content)
   } catch (error) {
-    console.warn("Failed to load guide metadata:", error);
-    return {};
+    console.warn("Failed to load guide metadata:", error)
+    return {}
   }
 }
 
@@ -39,24 +39,26 @@ export async function loadGuideMetadataServer(): Promise<AllGuideMetadata> {
  */
 export async function loadGuideMetadata(): Promise<AllGuideMetadata> {
   try {
-    const response = await fetch("/guide-metadata.json");
+    const response = await fetch("/guide-metadata.json")
     if (!response.ok) {
-      console.warn("Failed to load guide metadata");
-      return {};
+      console.warn("Failed to load guide metadata")
+      return {}
     }
-    return await response.json();
+    return await response.json()
   } catch (error) {
-    console.error("Error loading guide metadata:", error);
-    return {};
+    console.error("Error loading guide metadata:", error)
+    return {}
   }
 }
 
 /**
  * Get metadata for a specific guide
  */
-export async function getGuideMetadata(guideId: string): Promise<GuideMetadata | null> {
-  const metadata = await loadGuideMetadata();
-  return metadata[guideId] || null;
+export async function getGuideMetadata(
+  guideId: string
+): Promise<GuideMetadata | null> {
+  const metadata = await loadGuideMetadata()
+  return metadata[guideId] || null
 }
 
 /**
@@ -64,13 +66,13 @@ export async function getGuideMetadata(guideId: string): Promise<GuideMetadata |
  */
 export function formatDate(dateString: string): string {
   try {
-    const date = new Date(dateString);
+    const date = new Date(dateString)
     return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
-    });
+    })
   } catch {
-    return dateString;
+    return dateString
   }
 }

@@ -453,13 +453,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -473,7 +473,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: 1px;
   line-height: 1.6;
 }
@@ -566,7 +566,6 @@ tt:after {
 }
 
 nav {
-
   ul,
   li {
     list-style-type: none;
@@ -594,24 +593,33 @@ html {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
   will-change: background-color, color;
 }
 
 /* Ensure consistent background throughout page */
 main {
   background-color: var(--bg-primary);
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
 }
 
 /* Synchronized transitions for theme-dependent elements */
 footer {
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base) !important;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base) !important;
 }
 
 footer * {
@@ -624,22 +632,31 @@ footer a {
 
 .container {
   padding: 0 10px;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
 }
 
 /* Ensure all direct children of body transition smoothly to prevent staggered loading */
-body>* {
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+body > * {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
 }
 
 /* Explicit transitions for container wrapper to sync with body background */
 .lg\:w-\[80vw\] {
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
 }
 
 /* Ensure all layout containers transition simultaneously */
 .mx-auto {
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
 }
 
 /* Ensure html element background transitions in sync with body */
@@ -770,7 +787,7 @@ blockquote {
 }
 
 .sidebar-nav-link:hover {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Yellow hover for consistency */
 }
 
@@ -788,7 +805,7 @@ blockquote {
 }
 
 .sidebar-subsection a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Yellow hover for consistency */
 }
 
@@ -814,13 +831,13 @@ html.dark .sidebar-nav-link {
 }
 
 html.dark .sidebar-nav-link:hover {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Yellow hover for consistency */
 }
 
 /* Active/current page link */
 html.dark .sidebar-nav-link.active {
-  color: #FFB81C;
+  color: #ffb81c;
   font-weight: 500;
 }
 
@@ -836,7 +853,7 @@ html.dark .sidebar-subsection a {
 }
 
 html.dark .sidebar-subsection a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Yellow hover for consistency */
 }
 
@@ -930,7 +947,9 @@ html.dark .filter-label {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-size: 0.95rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .filter-input:focus {
@@ -1141,7 +1160,9 @@ html.dark .toggle-indicator::after {
   svg {
     width: 32px;
     height: 32px;
-    transition: transform var(--transition-base), filter var(--transition-base);
+    transition:
+      transform var(--transition-base),
+      filter var(--transition-base);
     display: block;
     margin: 0 auto;
   }
@@ -1231,14 +1252,16 @@ html.dark .toggle-indicator::after {
     box-shadow: 0 6px 16px rgba(255, 184, 28, 0.3);
     transition: all var(--transition-base);
     background-size: 30px 30px;
-    background-image: linear-gradient(45deg,
-        rgba(0, 0, 0, 0.04) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(0, 0, 0, 0.04) 50%,
-        rgba(0, 0, 0, 0.04) 75%,
-        transparent 75%,
-        transparent);
+    background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.04) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.04) 50%,
+      rgba(0, 0, 0, 0.04) 75%,
+      transparent 75%,
+      transparent
+    );
     animation: stripes 1s linear 0s infinite normal none running;
   }
 
@@ -1275,7 +1298,7 @@ a {
 }
 
 a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
   text-decoration: underline;
 }
 
@@ -1284,7 +1307,7 @@ html.dark a {
 }
 
 html.dark a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 a:focus {
@@ -1301,7 +1324,9 @@ a:focus {
   padding: 1.25rem;
   transition: all var(--transition-base);
   position: relative;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.04);
 
   &:hover {
     transform: scale(1.02);
@@ -1394,8 +1419,9 @@ html.dark .card:hover {
 }
 
 html.dark .warning-box {
-  background-color: #78350f;
-  color: #fcd34d;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
 .info-box {
@@ -1568,7 +1594,6 @@ a:focus-visible {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -1622,7 +1647,7 @@ a:focus-visible {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 8px solid #FFB81C;
+  border-bottom: 8px solid #ffb81c;
   z-index: 51;
 }
 
@@ -1645,7 +1670,6 @@ a:focus-visible {
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1672,7 +1696,7 @@ a:focus-visible {
   position: absolute;
   bottom: 40px;
   right: -20px;
-  background: linear-gradient(135deg, #FFB81C 0%, #f5a623 100%);
+  background: linear-gradient(135deg, #ffb81c 0%, #f5a623 100%);
   color: white;
   padding: 6px 32px;
   font-size: 11px;
@@ -1721,7 +1745,7 @@ a:focus-visible {
 
 /* Dark mode support for ribbons */
 html.dark .guide-card-container .new-ribbon::before {
-  background: linear-gradient(135deg, #FFB81C 0%, #f5a623 100%);
+  background: linear-gradient(135deg, #ffb81c 0%, #f5a623 100%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -1750,7 +1774,7 @@ html.dark .guide-card {
 html.dark .guide-card:hover {
   background-color: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
-  border-left: 4px solid #FFB81C !important;
+  border-left: 4px solid #ffb81c !important;
 }
 
 /* Dark mode text hierarchy */
@@ -1765,13 +1789,13 @@ html.dark .career-description {
 /* Zero to Offer link styling in dark mode */
 html.dark .career-description a,
 html.dark .zero-to-offer-link {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Use Pitt gold for important links */
 }
 
 html.dark .career-description a:hover,
 html.dark .zero-to-offer-link:hover {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 /* Card titles in dark mode */
@@ -1782,23 +1806,23 @@ html.dark .guide-card h3 {
 }
 
 html.dark .guide-card:hover h3 {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 /* Consistent hover effects for guide card titles */
-a>div h1 {
+a > div h1 {
   transition: text-decoration 0.2s ease;
 }
 
-a>div:hover h1 {
+a > div:hover h1 {
   text-decoration: underline;
-  text-decoration-color: #FFB81C;
+  text-decoration-color: #ffb81c;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
-html.dark a>div:hover h1 {
-  text-decoration-color: #FFB81C;
+html.dark a > div:hover h1 {
+  text-decoration-color: #ffb81c;
 }
 
 /* Breadcrumb Navigation Dark Mode */
@@ -1807,12 +1831,12 @@ html.dark .breadcrumb-nav {
 }
 
 html.dark .breadcrumb-nav a {
-  color: #FFB81C;
+  color: #ffb81c;
   /* Gold for active links */
 }
 
 html.dark .breadcrumb-nav a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 html.dark .breadcrumb-nav span {
@@ -1823,11 +1847,11 @@ html.dark .breadcrumb-nav span {
 /* Courses Page Highlighting Styling */
 /* Adaptive Highlighting System - Light Mode (Subtle Beige/Tan Background with Dark Text) */
 .scheduling-guide-highlight {
-  background-color: #FFF8E1 !important;
+  background-color: #fff8e1 !important;
   /* Very light yellow/beige background */
   color: #1a1a1a !important;
   /* Dark text for maximum readability */
-  border: 2px solid #FFB81C !important;
+  border: 2px solid #ffb81c !important;
   /* Yellow border for visibility */
   padding: 2px 4px;
   border-radius: 4px;
@@ -1850,9 +1874,9 @@ html.dark .breadcrumb-nav span {
 
 /* Adaptive Highlighting System - Dark Mode */
 html.dark .scheduling-guide-highlight {
-  background-color: #FFB800 !important;
+  background-color: #ffb800 !important;
   /* Yellow background */
-  border: 1px solid #FFB81C;
+  border: 1px solid #ffb81c;
   color: #000000 !important;
   /* Black text for maximum contrast */
   padding: 2px 4px;
@@ -1885,7 +1909,7 @@ html.dark .filter-button {
 
 html.dark .filter-button:hover {
   background-color: #333333 !important;
-  border-color: #FFB81C !important;
+  border-color: #ffb81c !important;
 }
 
 /* Ensure ribbons work well in dark mode */
@@ -1916,7 +1940,11 @@ header.header {
   align-items: center;
   /* Vertically center all items */
   justify-content: space-between;
-  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   /* Subtle shadow for separation */
   position: relative;
@@ -1975,7 +2003,7 @@ html.dark header.header {
 }
 
 /* Target the Search component in header */
-.header-right>div {
+.header-right > div {
   width: 180px;
   /* Width to fit "Search..." placeholder text exactly */
   max-width: 100%;
@@ -1983,7 +2011,7 @@ html.dark header.header {
   /* Give breathing room before the moon icon */
 }
 
-.header-right>div .search-input-wrapper {
+.header-right > div .search-input-wrapper {
   height: 40px;
   width: 100%;
 }
@@ -2021,9 +2049,11 @@ html.dark header.header {
 
 .search-input:focus {
   background-color: #ffffff;
-  border-color: #FFB81C;
+  border-color: #ffb81c;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 184, 28, 0.1), 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 0 0 3px rgba(255, 184, 28, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
 
@@ -2049,7 +2079,7 @@ html.dark header.header {
 }
 
 .search-input-wrapper:focus-within .search-icon {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 .search-clear-button {
@@ -2079,7 +2109,7 @@ html.dark header.header {
 }
 
 .search-clear-button:focus {
-  outline: 2px solid #FFB81C;
+  outline: 2px solid #ffb81c;
   outline-offset: 2px;
 }
 
@@ -2089,7 +2119,7 @@ html.dark header.header {
 
 /* Keyboard navigation indicators */
 .search-input:focus-visible {
-  outline: 2px solid #FFB81C;
+  outline: 2px solid #ffb81c;
   outline-offset: 2px;
 }
 
@@ -2100,7 +2130,7 @@ html.dark header.header {
     max-width: 180px;
   }
 
-  .header-right>div {
+  .header-right > div {
     width: 100%;
     max-width: 180px;
   }
@@ -2121,7 +2151,7 @@ html.dark header.header {
     max-width: 180px;
   }
 
-  .header-right>div {
+  .header-right > div {
     max-width: 180px;
   }
 
@@ -2149,7 +2179,7 @@ html.dark header.header {
 
 /* Enhanced focus states for keyboard navigation */
 .search-input:focus-visible {
-  outline: 2px solid #FFB81C;
+  outline: 2px solid #ffb81c;
   outline-offset: 2px;
   border-radius: 8px;
 }
@@ -2163,7 +2193,6 @@ html.dark header.header {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-
   .search-input,
   .search-clear-button,
   .theme-toggle-button,
@@ -2206,10 +2235,12 @@ html.dark .search-input:hover {
 
 html.dark .search-input:focus {
   background-color: rgba(255, 255, 255, 0.2) !important;
-  border-color: #FFB81C !important;
+  border-color: #ffb81c !important;
   /* Gold border on focus */
   outline: none;
-  box-shadow: 0 0 0 3px rgba(255, 184, 28, 0.15), 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 0 0 3px rgba(255, 184, 28, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
 
@@ -2218,7 +2249,7 @@ html.dark .search-icon {
 }
 
 html.dark .search-input-wrapper:focus-within .search-icon {
-  color: #FFB81C !important;
+  color: #ffb81c !important;
 }
 
 html.dark .search-clear-button {
@@ -2243,7 +2274,10 @@ html.dark .search-clear-button:hover {
   padding: 0;
   color: rgba(255, 255, 255, 0.8);
   /* Match search icon color */
-  transition: opacity var(--transition-base), transform var(--transition-base), color var(--transition-base);
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base),
+    color var(--transition-base);
   position: relative;
 }
 
@@ -2267,7 +2301,7 @@ html.dark .search-clear-button:hover {
 }
 
 .theme-toggle-button:focus-visible {
-  outline: 2px solid #FFB81C;
+  outline: 2px solid #ffb81c;
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -2290,7 +2324,9 @@ html.dark .theme-toggle-button:hover {
 /* Icon styling - moon in light mode (filled white, no stroke), sun in dark mode (filled gold) */
 .theme-toggle-button svg {
   fill: currentColor;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 /* Moon icon - no stroke, just filled */
@@ -2301,10 +2337,10 @@ html.dark .theme-toggle-button:hover {
 
 /* Sun icon in dark mode - filled with gold, keep stroke for rays */
 html.dark .theme-toggle-button svg {
-  fill: #FFB81C;
+  fill: #ffb81c;
   /* Gold color for sun icon */
-  stroke: #FFB81C;
-  color: #FFB81C;
+  stroke: #ffb81c;
+  color: #ffb81c;
 }
 
 /* Article Layout - Wrapper for sidebar and content */
@@ -2373,7 +2409,6 @@ html.dark .theme-toggle-button svg {
   align-items: flex-start;
 }
 
-
 /* Override breadcrumb styles when inside article-layout-wrapper */
 .article-layout-wrapper .breadcrumb-nav {
   margin: 0 0 32px 0;
@@ -2439,7 +2474,7 @@ html.dark .article-content-wrapper a {
 }
 
 html.dark .article-content-wrapper a:hover {
-  color: #FFB81C;
+  color: #ffb81c;
 }
 
 /* Typography & Reading Experience */

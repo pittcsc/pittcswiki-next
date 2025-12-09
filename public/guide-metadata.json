@@ -209,27 +209,27 @@
     ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 1771,
-    "readingTime": 9,
-    "commits": 6
+    "wordCount": 1340,
+    "readingTime": 7,
+    "commits": 8
   },
   "guide-academics/study-abroad": {
     "path": "academics/study-abroad",
-    "author": "Steven Jarmell",
-    "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
-    "originalAuthorEmail": "sjj27@pitt.edu",
+    "author": "Shreyash Ranjan",
+    "authorEmail": "56934841+codingshreyash@users.noreply.github.com",
+    "originalAuthor": "Shreyash Ranjan",
+    "originalAuthorEmail": "56934841+codingshreyash@users.noreply.github.com",
     "updaters": [
-      "Shreyash Ranjan"
+      "David"
     ],
     "updaterEmails": [
-      "56934841+codingshreyash@users.noreply.github.com"
+      "136610493+dvdzs8@users.noreply.github.com"
     ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 1693,
-    "readingTime": 9,
-    "commits": 3
+    "wordCount": 2171,
+    "readingTime": 11,
+    "commits": 9
   },
   "guide-academics/succeed-in-course-x/succeed-in-1501": {
     "path": "academics/succeed-in-course-x/succeed-in-1501",
@@ -307,7 +307,7 @@
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1888,
     "readingTime": 10,
-    "commits": 4
+    "commits": 5
   },
   "guide-career/freshman-sophomore-opportunities": {
     "path": "career/freshman-sophomore-opportunities",
@@ -413,7 +413,7 @@
     "created": "2025-11-23T15:30:42.000Z",
     "wordCount": 753,
     "readingTime": 4,
-    "commits": 2
+    "commits": 3
   },
   "guide-career/study-plan": {
     "path": "career/study-plan",
@@ -467,9 +467,9 @@
     "updaterEmails": [],
     "lastModified": "2025-11-23T20:56:03.000Z",
     "created": "2025-11-23T20:56:03.000Z",
-    "wordCount": 1732,
+    "wordCount": 1738,
     "readingTime": 9,
-    "commits": 1
+    "commits": 2
   },
   "guide-skills/clubs": {
     "path": "skills/clubs",
@@ -557,17 +557,19 @@
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [
       "braynguyen",
-      "Brayden Nguyen"
+      "Brayden Nguyen",
+      "Shreyash Ranjan"
     ],
     "updaterEmails": [
       "btn16@pitt.edu",
-      "112491386+braynguyen@users.noreply.github.com"
+      "112491386+braynguyen@users.noreply.github.com",
+      "56934841+codingshreyash@users.noreply.github.com"
     ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 1601,
+    "wordCount": 1607,
     "readingTime": 9,
-    "commits": 6
+    "commits": 7
   },
   "guide-skills/getting-started-with-x/projects": {
     "path": "skills/getting-started-with-x/projects",

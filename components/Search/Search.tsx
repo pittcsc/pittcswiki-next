@@ -13,7 +13,10 @@ const Search = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false)
       }
     }
@@ -123,7 +126,12 @@ const Search = () => {
       </div>
 
       {isOpen && (
-        <div id="search-results" role="region" aria-live="polite" aria-label="Search results">
+        <div
+          id="search-results"
+          role="region"
+          aria-live="polite"
+          aria-label="Search results"
+        >
           <SearchResults
             results={results}
             isLoading={isLoading}

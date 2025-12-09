@@ -1,7 +1,16 @@
 ---
 title: "Running for PittCSC Officer"
 guides_blurb: "Interested in leading the Pitt Computer Science Club? Here's everything you need to know about running for an officer position."
-search_tags: ["officer", "leadership", "election", "csc", "volunteering", "responsibility", "involvement"]
+search_tags:
+  [
+    "officer",
+    "leadership",
+    "election",
+    "csc",
+    "volunteering",
+    "responsibility",
+    "involvement",
+  ]
 ---
 
 > Think you'd make a great CSC officer? This guide will walk you through the process of running for a leadership position in the Pitt Computer Science Club!
@@ -26,21 +35,27 @@ Being a CSC officer is a volunteer position and requires significant time commit
 The CSC typically has the following positions available:
 
 ### President
+
 Responsible for overall club vision, strategy, and representing CSC to the university.
 
 ### Vice President
+
 Assists the president and oversees day-to-day operations and logistics.
 
 ### Treasurer
+
 Manages club budget, funding, and financial records.
 
 ### Secretary
+
 Handles communications, meeting notes, and administrative tasks.
 
 ### Event Coordinators
+
 Organize workshops, panels, hackathons, and social events.
 
 ### Technical Lead
+
 Maintains website, technical infrastructure, and code repositories.
 
 <div class="info-box">
@@ -63,23 +78,27 @@ You don't need to have all of these—just be genuine about your interest!
 ## The Application and Election Process
 
 ### 1. Application Phase
+
 - Elections typically happen in the spring semester
 - Submit an application form (available on CSC channels)
 - Write a brief statement about why you want to run
 - Attend any mandatory information sessions
 
 ### 2. Campaigning (Optional)
+
 - Create a short video or speech about your platform
 - Share your vision for the club
 - Talk to club members about your ideas
 - Answer questions about your leadership approach
 
 ### 3. Voting
+
 - Active CSC members vote for candidates
 - Voting typically happens online or at a club meeting
 - Some positions may be uncontested
 
 ### 4. Transition
+
 - Newly elected officers are announced
 - Meet with outgoing officers for handoff
 - Begin planning for the upcoming year
@@ -87,18 +106,21 @@ You don't need to have all of these—just be genuine about your interest!
 ## Tips for a Successful Campaign
 
 **Before You Apply:**
+
 - Attend multiple CSC meetings to understand the club culture
 - Talk to current officers about their experience
 - Identify specific goals or improvements you'd like to make
 - Be honest about your availability and commitment
 
 **In Your Application:**
+
 - Be specific about your vision for the club
 - Highlight relevant experiences or skills
 - Show genuine enthusiasm (not just resume-building)
 - Explain how you'll support the community, not just lead it
 
 **During the Process:**
+
 - Listen to feedback from club members
 - Collaborate with other candidates
 - Focus on what benefits CSC, not just personal ambitions

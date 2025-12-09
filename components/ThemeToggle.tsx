@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import { useTheme } from "@/context/ThemeContext";
-import { useEffect, useState } from "react";
+import { useTheme } from "@/context/ThemeContext"
+import { useEffect, useState } from "react"
 
 function ThemeToggleButton() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
     // Return placeholder during hydration
-    return <div className="theme-toggle-button-placeholder" />;
+    return <div className="theme-toggle-button-placeholder" />
   }
 
   const handleClick = () => {
@@ -70,7 +70,7 @@ function ThemeToggleButton() {
         </svg>
       )}
     </button>
-  );
+  )
 }
 
-export default ThemeToggleButton;
+export default ThemeToggleButton

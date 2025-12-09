@@ -57,9 +57,9 @@ const Course = ({
         style={
           highlightColor
             ? {
-              borderColor: highlightColor,
-              boxShadow: `0px 0px 4px ${highlightColor}`,
-            }
+                borderColor: highlightColor,
+                boxShadow: `0px 0px 4px ${highlightColor}`,
+              }
             : {}
         }
         onClick={onClick}

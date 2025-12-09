@@ -25,9 +25,7 @@ const CourseInteractiveListing = ({
   const normalizedSearch = searchTerm.trim().toLowerCase()
   const matchesSearch = (course: any) => {
     if (!normalizedSearch) return true
-    const titleMatch = course.title
-      ?.toLowerCase()
-      .includes(normalizedSearch)
+    const titleMatch = course.title?.toLowerCase().includes(normalizedSearch)
     const idMatch = course.id?.toLowerCase().includes(normalizedSearch)
     return titleMatch || idMatch
   }

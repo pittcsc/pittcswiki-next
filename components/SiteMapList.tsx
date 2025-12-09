@@ -47,8 +47,7 @@ const CardView = ({ tree }: any) => {
           {tree.title}
         </a>
       )}
-      {
-        tree.children &&
+      {tree.children &&
         tree.href !== "/courses/" &&
         tree.children.sort(sortAlphaByTitle).map((child: any) => (
           <a
@@ -58,8 +57,7 @@ const CardView = ({ tree }: any) => {
           >
             {child.title}
           </a>
-        ))
-      }
+        ))}
     </>
   )
 }

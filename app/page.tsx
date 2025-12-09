@@ -14,13 +14,16 @@ export default function Home() {
 
   useEffect(() => {
     const checkDarkMode = () => {
-      setIsDark(document.documentElement.classList.contains('dark'))
+      setIsDark(document.documentElement.classList.contains("dark"))
     }
 
     checkDarkMode()
 
     const observer = new MutationObserver(checkDarkMode)
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
 
     return () => observer.disconnect()
   }, [])
@@ -35,20 +38,22 @@ export default function Home() {
         className="hero-section relative overflow-hidden bg-[#fafbfc] dark:bg-[#0f0f0f]"
         style={{
           backgroundImage: isDark ? darkGradient : lightGradient,
-          width: '100vw',
-          marginLeft: 'calc(-50vw + 50%)',
-          marginTop: '-20px',
-          paddingTop: '5rem',
-          paddingBottom: '3rem',
-          backgroundPosition: 'center top',
-          backgroundColor: isDark ? '#0f0f0f' : '#fafbfc',
+          width: "100vw",
+          marginLeft: "calc(-50vw + 50%)",
+          marginTop: "-20px",
+          paddingTop: "5rem",
+          paddingBottom: "3rem",
+          backgroundPosition: "center top",
+          backgroundColor: isDark ? "#0f0f0f" : "#fafbfc",
         }}
       >
         {/* Hero Content */}
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="flex justify-center items-center">
             <div className="hidden md:block self-end h-64 bg-white dark:bg-[#2a2a2a] p-6 shadow-2xl dark:shadow-2xl w-1/2 border border-gray-200 dark:border-[#404040]">
-              <h1 className="text-black dark:text-white font-bold">The Pitt CS Wiki</h1>
+              <h1 className="text-black dark:text-white font-bold">
+                The Pitt CS Wiki
+              </h1>
               <p className="text-gray-800 dark:text-[#cccccc]">
                 A collection of course testimonials, guides, career prep
                 resources, and much more!
@@ -69,10 +74,12 @@ export default function Home() {
             </div>
           </div>
           <div className="md:hidden mt-12 text-center px-4">
-            <h1 className="text-black dark:text-white font-bold">The Pitt CS Wiki</h1>
+            <h1 className="text-black dark:text-white font-bold">
+              The Pitt CS Wiki
+            </h1>
             <p className="text-gray-800 dark:text-[#cccccc]">
-              A collection of course testimonials, guides, career prep resources,
-              and much more!
+              A collection of course testimonials, guides, career prep
+              resources, and much more!
             </p>
             <Link
               href="/guides/"

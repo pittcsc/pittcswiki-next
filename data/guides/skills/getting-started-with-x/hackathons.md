@@ -29,7 +29,6 @@ There are many reasons to do so!
   - With the rise of AI and “vibe coding,” it has become harder to distinguish a genuinely strong project from a weaker one. Because hackathons involve formal judging, they provide extra assurance that your project demonstrates real quality.
   - Most hackathon projects are built in teams, similar to real workplace collaboration. Employers highly value candidates who have collaboration skills and these stories perfectly fit most behvioral interview questions.
 
-
 ## What makes a good hackathon?
 
 Pretty much any hackathon can be a good hackathon. As long as you have wifi, a space to work, food, and a place to sleep your experience should be golden. But, there is always typically one part of a hackathon that can make or break the experience, judging.
@@ -45,13 +44,13 @@ But the worst hackathons devolve into pitching competitions. Pitching competitio
 The most important step of any hackathon is coming up with an idea. Such a simple task has tripped up myself and tons of other teams I have talked to at hackathons across the country. Here is the step-by-step process I invented to help you come up with the perfect project idea for you.
 
 1. List out as many of your interests or topics under a specfici track as possible:
-    - interests: fashion, rock climbing, chess, etc.
-    - Environment track: farming, natural disasters, carbon emissions, etc.
+   - interests: fashion, rock climbing, chess, etc.
+   - Environment track: farming, natural disasters, carbon emissions, etc.
 2. List out as many of the CS related topics you are interested in:
-    - e.g., game development, natural language processing (NLP), computer vision (CV), blockchain, etc.
+   - e.g., game development, natural language processing (NLP), computer vision (CV), blockchain, etc.
 3. Pick one from each list and try to come up with a way to combine the two topics:
-    - farming + computer vision = crop disease detection
-    - chess + AR = over the board chess helper
+   - farming + computer vision = crop disease detection
+   - chess + AR = over the board chess helper
 
 ## Tips for attending a hackathon
 
@@ -83,13 +82,13 @@ Pitt Challenge is a hackathon that's themed and focused on healthcare problems a
 
 You can find more on the [MLH website](https://mlh.io/)
 
-| Hackathon       | School                     | Description |
-|-----------------|----------------------------|-------------|
-| TreeHacks       | Stanford University        | A highly selective hackathon that covers travel expenses and features top-tier sponsors. |
-| HackMIT         | Massachusetts Institute of Technology | One of the most competitive and well-known hackathons in the world. |
-| Hack the North  | University of Waterloo     | Canada’s largest hackathon, drawing thousands of talented students each year. |
-| PennApps        | University of Pennsylvania | The very first college hackathon and one of my earliest hackathon experiences. |
-| BitCamp         | University of Maryland     | One of the largest hackathons on the East Coast where PittCSC was able to give a talk. |
-| TartanHacks     | Carnegie Mellon University | A major Pittsburgh-area hackathon hosted by ScottyLabs just down the road. |
+| Hackathon      | School                                | Description                                                                              |
+| -------------- | ------------------------------------- | ---------------------------------------------------------------------------------------- |
+| TreeHacks      | Stanford University                   | A highly selective hackathon that covers travel expenses and features top-tier sponsors. |
+| HackMIT        | Massachusetts Institute of Technology | One of the most competitive and well-known hackathons in the world.                      |
+| Hack the North | University of Waterloo                | Canada’s largest hackathon, drawing thousands of talented students each year.            |
+| PennApps       | University of Pennsylvania            | The very first college hackathon and one of my earliest hackathon experiences.           |
+| BitCamp        | University of Maryland                | One of the largest hackathons on the East Coast where PittCSC was able to give a talk.   |
+| TartanHacks    | Carnegie Mellon University            | A major Pittsburgh-area hackathon hosted by ScottyLabs just down the road.               |
 
-> Updater's Note: When updating this article I kept the both Alex's use of first-person and even added my own to maintain the personal feel of the article. 
+> Brayden's updater's Note: When updating this article I kept Alex's use of first-person and even added my own to maintain the personal feel of the article.

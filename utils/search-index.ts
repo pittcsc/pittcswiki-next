@@ -31,7 +31,9 @@ const extractDescription = (markdown: string): string => {
   // Remove markdown syntax and extract first paragraph
   const lines = content
     .split("\n")
-    .filter((line) => line.trim() && !line.startsWith("#") && !line.startsWith(">"))
+    .filter(
+      (line) => line.trim() && !line.startsWith("#") && !line.startsWith(">")
+    )
     .join(" ")
 
   // Remove markdown formatting
@@ -77,7 +79,8 @@ export const buildSearchIndex = async (): Promise<SearchIndex> => {
 
   // Add all courses from CourseInfoData
   CourseInfoData.courses.forEach((course) => {
-    const searchableText = `${course.title} ${course.id} ${course.description}`.toLowerCase()
+    const searchableText =
+      `${course.title} ${course.id} ${course.description}`.toLowerCase()
     results.push({
       id: course.id,
       type: "course",
@@ -91,7 +94,8 @@ export const buildSearchIndex = async (): Promise<SearchIndex> => {
 
   // Add all courses from CoreCoursesData
   Object.values(CoreCoursesData).forEach((course) => {
-    const searchableText = `${course.title} ${course.code} ${course.id} ${course.description}`.toLowerCase()
+    const searchableText =
+      `${course.title} ${course.code} ${course.id} ${course.description}`.toLowerCase()
     results.push({
       id: course.id,
       type: "course",
@@ -125,7 +129,8 @@ export const buildSearchIndex = async (): Promise<SearchIndex> => {
         const tagsString = Array.isArray(frontmatter.search_tags)
           ? frontmatter.search_tags.join(" ")
           : ""
-        const searchableText = `${title} ${description} ${tagsString}`.toLowerCase()
+        const searchableText =
+          `${title} ${description} ${tagsString}`.toLowerCase()
 
         results.push({
           id,
@@ -151,10 +156,7 @@ export const buildSearchIndex = async (): Promise<SearchIndex> => {
 }
 
 // Fuzzy search helper - simple substring matching with scoring
-export const fuzzySearch = (
-  query: string,
-  searchText: string
-): number => {
+export const fuzzySearch = (query: string, searchText: string): number => {
   const q = query.toLowerCase()
   const text = searchText.toLowerCase()
 
@@ -180,7 +182,10 @@ export const fuzzySearch = (
 }
 
 // Search the index
-export const searchIndex = (query: string, index: SearchIndex): SearchResult[] => {
+export const searchIndex = (
+  query: string,
+  index: SearchIndex
+): SearchResult[] => {
   if (!query.trim()) return []
 
   const scored = index.results

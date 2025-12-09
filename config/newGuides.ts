@@ -13,6 +13,7 @@ export const newGuides = [
 
 export const updatedGuides = [
   "career/general-college-advice", // General College Advice - UPDATED
+  "academics/study-abroad", // Study Abroad - UPDATED
 ]
 
 /**

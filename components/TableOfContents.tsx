@@ -10,8 +10,8 @@ const createSlug = (text: string) => {
   return text
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
 }
 
 type TableOfContentsProps = {
@@ -26,16 +26,16 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       {headings.map((heading, i) => {
         const isSectionHeader = heading.depth === 2
         const isSubsection = heading.depth > 2
-        
+
         return (
           <li
             key={i}
             className={`font-bold toc-heading-depth-${heading.depth} ${
-              isSectionHeader ? 'sidebar-section-header' : ''
-            } ${isSubsection ? 'sidebar-subsection' : ''}`}
+              isSectionHeader ? "sidebar-section-header" : ""
+            } ${isSubsection ? "sidebar-subsection" : ""}`}
           >
             <a
-              className={`sidebar-nav-link ${isSectionHeader ? '' : ''}`}
+              className={`sidebar-nav-link ${isSectionHeader ? "" : ""}`}
               href={"#" + createSlug(heading.value)}
             >
               {truncate(heading.value)}

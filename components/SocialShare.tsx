@@ -26,7 +26,9 @@ const SocialShare = ({ title, url: initialUrl }: SocialShareProps) => {
 
   const handleEmailShare = () => {
     const subject = encodeURIComponent(`Check out: ${title}`)
-    const body = encodeURIComponent(`I found this helpful guide: ${title}\n\n${url}`)
+    const body = encodeURIComponent(
+      `I found this helpful guide: ${title}\n\n${url}`
+    )
     window.open(`mailto:?subject=${subject}&body=${body}`, "_blank")
   }
 

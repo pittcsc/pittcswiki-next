@@ -6,6 +6,7 @@ import { sortStrings } from "@/utils/sort-strings"
 import { promises as fs } from "fs"
 import path from "path"
 import Markdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
 import { GetFolderInformation } from "@/utils/guides-page-helper"
 import { getGuideStatus } from "@/config/newGuides"
 import { loadGuideMetadataServer, GuideMetadata } from "@/utils/guide-metadata"
@@ -122,12 +123,19 @@ export default async function GuidePage({
   return (
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
-      <div className={`blog-post-container ${curPath === 'career' ? 'career-page' : ''}`}>
+      <div
+        className={`blog-post-container ${curPath === "career" ? "career-page" : ""
+          }`}
+      >
         <div className="blog-post mb-8">
           <div className="frontmatter">
-            <h1 className={`title ${curPath === 'career' ? 'career-title' : ''}`}>{indexFileFrontMatter.title}</h1>
-            <div className={curPath === 'career' ? 'career-description' : ''}>
-              <Markdown>{relevantContent}</Markdown>
+            <h1
+              className={`title ${curPath === "career" ? "career-title" : ""}`}
+            >
+              {indexFileFrontMatter.title}
+            </h1>
+            <div className={curPath === "career" ? "career-description" : ""}>
+              <Markdown rehypePlugins={[rehypeRaw]}>{relevantContent}</Markdown>
             </div>
             <h3>Guides</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -145,7 +153,7 @@ export default async function GuidePage({
                     <div key={i} className="guide-card-container">
                       <a
                         href={file.href}
-                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] dark:hover:border-l-[#FFB81C] hover:text-[#243e8b] dark:hover:text-[#FFB81C] hover:shadow-md hover:-translate-y-0.5 block focus:outline-none"
+                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] hover:text-[#243e8b] hover:shadow-md hover:-translate-y-0.5 block focus:outline-none"
                         aria-label={
                           guideStatus
                             ? `${file.title} (${guideStatus} guide)`

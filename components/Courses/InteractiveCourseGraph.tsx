@@ -20,45 +20,45 @@ const edgeType = "smoothstep"
 import "@xyflow/react/dist/style.css"
 
 const nodeStyle = {
-  borderRadius: '8px',
-  padding: '10px',
-  fontSize: '14px',
-  fontWeight: '500',
+  borderRadius: "8px",
+  padding: "10px",
+  fontSize: "14px",
+  fontWeight: "500",
   width: 110,
   height: 40,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }
 
 const getNodeStyle = (nodeId: string, selectedCourse: string | null) => {
-  const isMathCourse = ['220', '230', '280'].includes(nodeId)
+  const isMathCourse = ["220", "230", "280"].includes(nodeId)
   const isSelected = nodeId === selectedCourse
 
   if (isSelected) {
     return {
       ...nodeStyle,
-      background: '#f59e0b',
-      border: '2px solid #d97706',
-      color: 'white',
-      fontWeight: 'bold',
+      background: "#f59e0b",
+      border: "2px solid #d97706",
+      color: "white",
+      fontWeight: "bold",
     }
   }
 
   if (isMathCourse) {
     return {
       ...nodeStyle,
-      background: '#e5e7eb',
-      border: '2px solid #9ca3af',
-      color: '#374151',
+      background: "#e5e7eb",
+      border: "2px solid #9ca3af",
+      color: "#374151",
     }
   }
 
   return {
     ...nodeStyle,
-    background: 'white',
-    border: '2px solid black',
-    color: 'black',
+    background: "white",
+    border: "2px solid black",
+    color: "black",
   }
 }
 
@@ -145,21 +145,87 @@ const initialNodes: Node[] = [
 
 // CS-only edges (direct prerequisites)
 export const csEdges = [
-  { id: "e401to445", source: "401", target: "445", type: edgeType, style: { stroke: 'black', strokeWidth: 2 } },
-  { id: "e445to447", source: "445", target: "447", type: edgeType, style: { stroke: 'black', strokeWidth: 2, strokeDasharray: '5,5' } },
-  { id: "e447to449", source: "447", target: "449", type: edgeType, style: { stroke: 'black', strokeWidth: 2, strokeDasharray: '5,5' } },
-  { id: "e441to1501", source: "441", target: "1501", type: edgeType, style: { stroke: 'black', strokeWidth: 2 } },
-  { id: "e441to1502", source: "441", target: "1502", type: edgeType, style: { stroke: 'black', strokeWidth: 2 } },
-  { id: "e445to1501", source: "445", target: "1501", type: edgeType, style: { stroke: 'black', strokeWidth: 2 } },
-  { id: "e441to1503", source: "441", target: "1503", type: edgeType, style: { stroke: 'black', strokeWidth: 2 } },
+  {
+    id: "e401to445",
+    source: "401",
+    target: "445",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2 },
+  },
+  {
+    id: "e445to447",
+    source: "445",
+    target: "447",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2, strokeDasharray: "5,5" },
+  },
+  {
+    id: "e447to449",
+    source: "447",
+    target: "449",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2, strokeDasharray: "5,5" },
+  },
+  {
+    id: "e441to1501",
+    source: "441",
+    target: "1501",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2 },
+  },
+  {
+    id: "e441to1502",
+    source: "441",
+    target: "1502",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2 },
+  },
+  {
+    id: "e445to1501",
+    source: "445",
+    target: "1501",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2 },
+  },
+  {
+    id: "e441to1503",
+    source: "441",
+    target: "1503",
+    type: edgeType,
+    style: { stroke: "black", strokeWidth: 2 },
+  },
 ]
 
 // Math prerequisite edges (shown when toggle is ON)
 export const mathEdges = [
-  { id: "e220to441", source: "220", target: "441", type: edgeType, style: { stroke: 'gray', strokeWidth: 2, opacity: 0.6 } },
-  { id: "e230to441", source: "230", target: "441", type: edgeType, style: { stroke: 'gray', strokeWidth: 2, opacity: 0.6 } },
-  { id: "e280to441", source: "280", target: "441", type: edgeType, style: { stroke: 'gray', strokeWidth: 2, opacity: 0.6 } },
-  { id: "e280to1503", source: "280", target: "1503", type: edgeType, style: { stroke: 'gray', strokeWidth: 2, opacity: 0.6 } },
+  {
+    id: "e220to441",
+    source: "220",
+    target: "441",
+    type: edgeType,
+    style: { stroke: "gray", strokeWidth: 2, opacity: 0.6 },
+  },
+  {
+    id: "e230to441",
+    source: "230",
+    target: "441",
+    type: edgeType,
+    style: { stroke: "gray", strokeWidth: 2, opacity: 0.6 },
+  },
+  {
+    id: "e280to441",
+    source: "280",
+    target: "441",
+    type: edgeType,
+    style: { stroke: "gray", strokeWidth: 2, opacity: 0.6 },
+  },
+  {
+    id: "e280to1503",
+    source: "280",
+    target: "1503",
+    type: edgeType,
+    style: { stroke: "gray", strokeWidth: 2, opacity: 0.6 },
+  },
 ]
 
 export const initialEdges = csEdges
@@ -172,7 +238,12 @@ const getLayoutedElements = (nodes: Node[], edges: any[], direction = "TB") => {
   const dagreGraph = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}))
 
   const isHorizontal = direction === "LR"
-  dagreGraph.setGraph({ rankdir: direction, align: "UL", nodesep: 50, ranksep: 60 })
+  dagreGraph.setGraph({
+    rankdir: direction,
+    align: "UL",
+    nodesep: 50,
+    ranksep: 60,
+  })
 
   nodes.forEach((node) => {
     dagreGraph.setNode(node.id, { width: nodeWidth, height: nodeHeight })
@@ -186,7 +257,11 @@ const getLayoutedElements = (nodes: Node[], edges: any[], direction = "TB") => {
 
   const newNodes = nodes.map((node) => {
     const nodeWithPosition = dagreGraph.node(node.id)
-    if (!nodeWithPosition || nodeWithPosition.x === undefined || nodeWithPosition.y === undefined) {
+    if (
+      !nodeWithPosition ||
+      nodeWithPosition.x === undefined ||
+      nodeWithPosition.y === undefined
+    ) {
       return node
     }
 

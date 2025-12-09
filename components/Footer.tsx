@@ -22,19 +22,35 @@ const Footer = (): JSX.Element => {
         </Link>
         .{` `}
         <p className="mb-0 text-sm">
-          <Link href="/about/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
+          <Link
+            href="/about/"
+            className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200"
+          >
             About
           </Link>
-          <Link href="mailto:pittcsc+wiki@gmail.com" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
+          <Link
+            href="mailto:pittcsc+wiki@gmail.com"
+            className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200"
+          >
             Contact
           </Link>
-          <Link href="/sitemap/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
+          <Link
+            href="/sitemap/"
+            className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200"
+          >
             Sitemap
           </Link>
-          <Link href="/feedback/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
+          <Link
+            href="/feedback/"
+            className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200"
+          >
             Feedback
           </Link>
-          <Link href="https://github.com/pittcsc/pittcswiki-next" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
+          <Link
+            href="https://github.com/pittcsc/pittcswiki-next"
+            target="_blank"
+            className="text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200"
+          >
             GitHub
           </Link>
         </p>

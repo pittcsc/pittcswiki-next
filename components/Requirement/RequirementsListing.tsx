@@ -16,7 +16,11 @@ const RequirementsListing = ({ requirements }: RequirementsListingProps) => {
 
   const { prereq, coreq, requirementsString } = requirements
 
-  if (prereq && Array.isArray(prereq) && (prereq.length === 0 || prereq[0] === "TODO")) {
+  if (
+    prereq &&
+    Array.isArray(prereq) &&
+    (prereq.length === 0 || prereq[0] === "TODO")
+  ) {
     return requirementsString ? (
       <div>
         <span className="font-bold">PRE-REQ: </span> Check the SCI Website

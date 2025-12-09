@@ -1,4 +1,4 @@
-declare module '@dagrejs/dagre' {
+declare module "@dagrejs/dagre" {
   export interface GraphLabel {
     rankdir?: string
     align?: string
@@ -72,7 +72,9 @@ declare module '@dagrejs/dagre' {
       edge(v: string, w: string, name?: string): Edge | undefined
       removeEdge(v: string, w: string, name?: string): Graph
       setDefaultNodeLabel(label: string | ((v: string) => Node)): Graph
-      setDefaultEdgeLabel(label: string | ((v: string, w: string) => Edge)): Graph
+      setDefaultEdgeLabel(
+        label: string | ((v: string, w: string) => Edge)
+      ): Graph
       [key: string]: any
     }
   }

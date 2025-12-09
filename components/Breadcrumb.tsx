@@ -40,13 +40,18 @@ const Breadcrumb = ({ slug }: BreadcrumbProps) => {
     ) : (
       <span className="flex items-center" key={`breadcrumb_${url}`}>
         <span className="mx-1 text-gray-400">/</span>
-        <span className="text-gray-600 dark:text-gray-400">{formattedText}</span>
+        <span className="text-gray-600 dark:text-gray-400">
+          {formattedText}
+        </span>
       </span>
     )
   })
 
   return (
-    <nav className="breadcrumb-nav flex flex-wrap items-center text-sm" aria-label="breadcrumb">
+    <nav
+      className="breadcrumb-nav flex flex-wrap items-center text-sm"
+      aria-label="breadcrumb"
+    >
       <Link href={"/"} className="hover:text-blue-500 transition-colors">
         Home
       </Link>

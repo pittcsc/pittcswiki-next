@@ -23,8 +23,9 @@ export default function GuidesPage() {
           </li>
         </ul>
         <p>
-          Below are collections of guides organized by topic. You can also use the
-          search bar at the top right to search for articles, classes and more!
+          Below are collections of guides organized by topic. You can also use
+          the search bar at the top right to search for articles, classes and
+          more!
         </p>
         <GuidesListing />
         <p>
@@ -50,8 +51,8 @@ export default function GuidesPage() {
           <SiteMapList />
         </div>
         <p>
-          Still curious about something but cannot find it? Please let us know and
-          we can add it! <Link href="/feedback">Fill out this form.</Link>
+          Still curious about something but cannot find it? Please let us know
+          and we can add it! <Link href="/feedback">Fill out this form.</Link>
         </p>
       </div>
     </div>

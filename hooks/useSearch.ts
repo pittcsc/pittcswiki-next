@@ -1,12 +1,18 @@
 import { useCallback, useEffect, useState, useRef } from "react"
-import { buildSearchIndex, searchIndex, SearchResult } from "@/utils/search-index"
+import {
+  buildSearchIndex,
+  searchIndex,
+  SearchResult,
+} from "@/utils/search-index"
 
 export const useSearch = () => {
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<SearchResult[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const debounceTimerRef = useRef<NodeJS.Timeout>()
-  const indexRef = useRef<Awaited<ReturnType<typeof buildSearchIndex>> | null>(null)
+  const indexRef = useRef<Awaited<ReturnType<typeof buildSearchIndex>> | null>(
+    null
+  )
 
   // Initialize search index on mount
   useEffect(() => {
@@ -32,37 +38,37 @@ export const useSearch = () => {
     }
   }, [])
 
-  const performSearch = useCallback(
-    (searchQuery: string) => {
-      if (!indexRef.current) return
+  const performSearch = useCallback((searchQuery: string) => {
+    if (!indexRef.current) return
 
-      setIsLoading(true)
-      try {
-        const searchResults = searchIndex(searchQuery, indexRef.current)
-        setResults(searchResults)
-      } catch (error) {
-        console.error("Search error:", error)
-        setResults([])
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    []
-  )
-
-  const handleQueryChange = useCallback((newQuery: string) => {
-    setQuery(newQuery)
-
-    // Clear existing debounce timer
-    if (debounceTimerRef.current) {
-      clearTimeout(debounceTimerRef.current)
+    setIsLoading(true)
+    try {
+      const searchResults = searchIndex(searchQuery, indexRef.current)
+      setResults(searchResults)
+    } catch (error) {
+      console.error("Search error:", error)
+      setResults([])
+    } finally {
+      setIsLoading(false)
     }
+  }, [])
 
-    // Debounce search by 300ms
-    debounceTimerRef.current = setTimeout(() => {
-      performSearch(newQuery)
-    }, 300)
-  }, [performSearch])
+  const handleQueryChange = useCallback(
+    (newQuery: string) => {
+      setQuery(newQuery)
+
+      // Clear existing debounce timer
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current)
+      }
+
+      // Debounce search by 300ms
+      debounceTimerRef.current = setTimeout(() => {
+        performSearch(newQuery)
+      }, 300)
+    },
+    [performSearch]
+  )
 
   // Cleanup debounce timer on unmount
   useEffect(() => {

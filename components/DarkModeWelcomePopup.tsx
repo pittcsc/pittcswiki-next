@@ -8,7 +8,7 @@ export default function DarkModeWelcomePopup() {
 
   useEffect(() => {
     // Check if user has already seen the popup
-    const hasSeenPopup = localStorage.getItem('darkModePopupSeen')
+    const hasSeenPopup = localStorage.getItem("darkModePopupSeen")
 
     if (!hasSeenPopup) {
       // Show popup after 1 second delay
@@ -32,7 +32,7 @@ export default function DarkModeWelcomePopup() {
     setIsAnimatingOut(true)
     setTimeout(() => {
       setIsVisible(false)
-      localStorage.setItem('darkModePopupSeen', 'true')
+      localStorage.setItem("darkModePopupSeen", "true")
     }, 300)
   }
 
@@ -54,7 +54,7 @@ export default function DarkModeWelcomePopup() {
       {/* Popup */}
       <div
         className={`welcome-popup fixed top-20 right-6 z-50 ${
-          isAnimatingOut ? 'animate-fadeOut' : 'animate-fadeIn'
+          isAnimatingOut ? "animate-fadeOut" : "animate-fadeIn"
         }`}
       >
         {/* Gold Arrow Pointer */}
@@ -68,7 +68,8 @@ export default function DarkModeWelcomePopup() {
                 The new default is dark mode!
               </h3>
               <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                If you&rsquo;d like to switch back to light mode, click the toggle above.
+                If you&rsquo;d like to switch back to light mode, click the
+                toggle above.
               </p>
             </div>
             <button

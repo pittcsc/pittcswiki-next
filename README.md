@@ -7,6 +7,7 @@ A modern, community-driven knowledge platform for University of Pittsburgh Compu
 ## About
 
 The Pitt CS Wiki is a comprehensive resource with 57+ guides covering:
+
 - **Academics**: Majors, minors, course planning, and degree requirements
 - **Career Development**: Internship strategies, resume tips, and interview prep
 - **Technical Skills**: Getting started with programming languages, frameworks, and tools
@@ -25,6 +26,7 @@ Rebuilt from the ground up with modern tools for better maintainability, perform
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 20+ (see `.nvmrc`)
 - npm or yarn
 
@@ -70,6 +72,7 @@ src/
 ```
 
 Guides are stored as Markdown in `data/guides/` and organized by category:
+
 - `data/guides/academics/` - Academic planning guides
 - `data/guides/career/` - Career development resources
 - `data/guides/skills/` - Technical skill guides
@@ -84,7 +87,9 @@ We welcome contributions! Whether you're adding new guides, fixing bugs, or impr
 4. **Submit a PR** with a clear description of your changes
 
 ### Code Quality
+
 All code must pass:
+
 ```bash
 npm run lint    # ESLint validation
 npm run format  # Prettier formatting

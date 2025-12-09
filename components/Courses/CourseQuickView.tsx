@@ -19,7 +19,9 @@ const CourseQuickView = ({
   children,
 }: CourseQuickViewProps) => {
   return id ? (
-    <CourseQuickViewContent {...{ id, description, title, terms_offered, instructors }} />
+    <CourseQuickViewContent
+      {...{ id, description, title, terms_offered, instructors }}
+    />
   ) : (
     <div>{children}</div>
   )

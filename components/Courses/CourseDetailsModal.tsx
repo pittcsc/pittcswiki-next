@@ -21,7 +21,7 @@ export default function CourseDetailsModal({
       {/* Backdrop */}
       <div
         className={`fixed inset-0 bg-black transition-opacity duration-300 z-40 ${
-          isOpen ? 'bg-opacity-50' : 'bg-opacity-0 pointer-events-none'
+          isOpen ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
         role="presentation"
@@ -31,7 +31,7 @@ export default function CourseDetailsModal({
       {/* Right Slide Panel Modal */}
       <div
         className={`fixed top-0 right-0 h-full bg-white dark:bg-[#1a1a1a] shadow-2xl dark:shadow-[0_-8px_32px_rgba(0,0,0,0.5)] z-50 w-full max-w-md transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? "translate-x-0" : "translate-x-full"
         } overflow-y-auto text-black dark:text-white`}
         role="dialog"
         aria-modal="true"
@@ -48,7 +48,10 @@ export default function CourseDetailsModal({
 
         {/* Course Header */}
         <div className="p-8 pt-4">
-          <h2 id="modal-title" className="text-4xl font-bold text-gray-900 dark:text-white mb-1 leading-tight">
+          <h2
+            id="modal-title"
+            className="text-4xl font-bold text-gray-900 dark:text-white mb-1 leading-tight"
+          >
             {course.code.replace("CMPINF ", "CS ")}
           </h2>
           <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 uppercase tracking-wide mb-6 leading-relaxed">
@@ -80,14 +83,20 @@ export default function CourseDetailsModal({
 
           {/* Credits */}
           <div className="mb-4 mt-6">
-            <span className="font-semibold text-gray-900 dark:text-white text-sm">CREDITS: </span>
-            <span className="text-gray-700 dark:text-gray-300 text-sm font-normal">{course.credits}</span>
+            <span className="font-semibold text-gray-900 dark:text-white text-sm">
+              CREDITS:{" "}
+            </span>
+            <span className="text-gray-700 dark:text-gray-300 text-sm font-normal">
+              {course.credits}
+            </span>
           </div>
 
           {/* Prerequisites */}
           {course.prerequisites.length > 0 && (
             <div className="mb-4">
-              <span className="font-semibold text-gray-900 dark:text-white text-sm">PRE-REQ: </span>
+              <span className="font-semibold text-gray-900 dark:text-white text-sm">
+                PRE-REQ:{" "}
+              </span>
               {course.prerequisites.map((prereq, idx) => {
                 // Extract course codes like CS 0401, CMPINF 0401, etc.
                 const courseCodeMatch = prereq.match(
@@ -95,7 +104,10 @@ export default function CourseDetailsModal({
                 )
                 if (courseCodeMatch) {
                   return (
-                    <span key={idx} className="text-gray-600 dark:text-gray-300 text-sm font-normal">
+                    <span
+                      key={idx}
+                      className="text-gray-600 dark:text-gray-300 text-sm font-normal"
+                    >
                       {idx > 0 && ", "}
                       {courseCodeMatch.map((code, codeIdx) => {
                         const cleanCode = code.replace(/\s/g, "")
@@ -137,7 +149,10 @@ export default function CourseDetailsModal({
                   )
                 }
                 return (
-                  <span key={idx} className="text-gray-600 dark:text-gray-300 text-sm font-normal">
+                  <span
+                    key={idx}
+                    className="text-gray-600 dark:text-gray-300 text-sm font-normal"
+                  >
                     {prereq}
                   </span>
                 )
@@ -148,7 +163,9 @@ export default function CourseDetailsModal({
           {/* Co-requisites */}
           {course.corequisites.length > 0 && (
             <div className="mb-6">
-              <span className="font-semibold text-gray-900 dark:text-white text-sm">CO-REQ: </span>
+              <span className="font-semibold text-gray-900 dark:text-white text-sm">
+                CO-REQ:{" "}
+              </span>
               {course.corequisites.map((coreq, idx) => {
                 // Extract course codes like CS 0401, CMPINF 0401, etc.
                 const courseCodeMatch = coreq.match(
@@ -156,7 +173,10 @@ export default function CourseDetailsModal({
                 )
                 if (courseCodeMatch) {
                   return (
-                    <span key={idx} className="text-gray-600 dark:text-gray-300 text-sm font-normal">
+                    <span
+                      key={idx}
+                      className="text-gray-600 dark:text-gray-300 text-sm font-normal"
+                    >
                       {idx > 0 && ", "}
                       {courseCodeMatch.map((code, codeIdx) => {
                         const cleanCode = code.replace(/\s/g, "")
@@ -198,7 +218,10 @@ export default function CourseDetailsModal({
                   )
                 }
                 return (
-                  <span key={idx} className="text-gray-600 dark:text-gray-300 text-sm font-normal">
+                  <span
+                    key={idx}
+                    className="text-gray-600 dark:text-gray-300 text-sm font-normal"
+                  >
                     {coreq}
                   </span>
                 )
@@ -221,7 +244,8 @@ export default function CourseDetailsModal({
           )}
 
           {/* View Student Reviews Button - Only for CS courses */}
-          {(course.code.startsWith("CS") || course.code.startsWith("CMPINF")) && (
+          {(course.code.startsWith("CS") ||
+            course.code.startsWith("CMPINF")) && (
             <a
               href={`/courses/${course.id}`}
               className="block w-full text-center bg-[#4A9EFF] dark:bg-[#4A9EFF] text-white py-3 px-4 rounded-lg hover:bg-[#6ab8ff] dark:hover:bg-[#6ab8ff] transition-all duration-300 font-semibold text-sm mt-6 hover:shadow-lg focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C]"

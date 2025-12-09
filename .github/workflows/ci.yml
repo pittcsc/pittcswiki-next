@@ -1,10 +1,10 @@
-name: Build
+name: CI
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
   pull_request:
-    branches: [main]
+    branches: ["main"]
 
 jobs:
   build:
@@ -26,8 +26,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate guide metadata
-        run: npm run generate-metadata
+      - name: Lint
+        run: npm run lint
+
+      - name: Format Check
+        run: npm run format
+
+      - name: Test
+        run: npm test
 
       - name: Build
         run: npm run build
