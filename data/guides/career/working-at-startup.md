@@ -4,7 +4,7 @@ title: "Working at a Startup"
 
 Whether you want to start something at Pitt or join a company in its early stages, getting into the startup world can be a tough landscape to navigate. The goal of this page is to be a starting point for anyone interested into getting into startups.
 
-**Page contents:**
+**Contents:**
 
 1. What is a startup?
 
@@ -31,336 +31,231 @@ To put it simply:
 
 ## 2. Pros of a startup
 
-TODO: Make these charts?
+### General Pros
 
-As both an intern and a full time employee:
+<details>
+<summary><strong>Rapid Learning</strong></summary>
+<ul><li>Startups are very fast paced, to the extent where you might be working on something entirely different every two weeks. You might build an API from scratch and then build the mobile app screen that actually calls it next. Outside of technical projects, you have less barriers to learn other disciplines, like social media, recruiting, or trust and safety if you express interest in these different areas of work.
+</details>
 
-* At a startup, you will learn **a lot**. Since it's so fast paced, you might be working on something different every two weeks. Touching so many different areas casts a wide range of learning. You are of course able to express interest in different areas of work you want to pick up.
+<details>
+<summary><strong>High Ownership</strong></summary>
+<ul><li>You will be expected to own certain features or systems, which means you will have to build, maintain, and answer questions about these systems that sometimes take entire teams in larger companies. This quickly builds initiative and leadership skills, which can sometimes be hard to get early in your career.
+</details>
 
-* At a startup, there is much higher ownership. You will be expected to own certain features or systems, which means you will have to build, maintain, and answer questions about these systems that sometimes take entire teams in larger companies. This quickly builds initiative and leadership skills. Note that ownership can sometimes be hard to get early in your career.
+<details>
+<summary><strong>Learn How a Company Operates</strong></summary>
+<ul><li>At a startup, higher ups are usually one or two links away. You can see how executives operate on a day to day basis while also seeing other processes like legal/recruiting/marketing all at the same time. It's hard to describe, but its like drinking company concentrate, instead of a regular soup. The bureaucracy of a larger company is not there, and so you might need to learn company procedures that you would otherwise be sheltered from at a larger company.
+</details>
 
-* You can learn more how a company *operates*. At a startup, higher ups are usually one or two links away. You can see how executives operate on a day to day basis while also seeing other processes like legal/recruiting/marketing all at the same time. It's hard to describe, but its like drinking company concentrate, instead of a regular soup
+<details>
+<summary><strong>San Francisco</strong></summary>
+<ul><li>Startups, especially AI startups, are likely located in San Francisco. SF is the tech capital of the world and that opens a lot of opportunities. For example, because there are so many tech employees and networking events with companies like Google, OpenAI, and YC, job opportunities are generally easier to find in SF (once already in SF).
+<li>SF is also super bikable, the Caltrain is really nice (during the day), and there is access to a lot of park space.
+<li>SF is near a lot of national parks.
+</details>
 
-* Startups are likely in SF
+<details>
+<summary><strong>Compensation</strong></summary>
+<ul><li>The compensation is usually very competitive depending on what stage that the startup is at. Good series A, B, or C startups can definitely pay as much as big tech, if not more. Startups usually give out options rather than stock in the company, which usually has a higher risk and higher reward than an already IPO'd company.
+</details>
 
-* You can wear different hats
+<details>
+<summary><strong>Networking</strong></summary>
+<ul><li>Within your startup, you are mostly friends with all your coworkers. Usually startups attract more younger talent, so it is not uncommon to go out with your team. This is also the case for some big tech teams though (and almost every other company).
+</details>
 
-* Compensation is usually very competitive, and rewards very hard work.
+<details>
+<summary><strong>Prestige</strong></summary>
+<ul><li>Good startups are arguably harder to get into than big tech. The prestige that comes with working at a good startup could help set you apart in a networking event or get funding later on if you want to found yourself.
+</details>
 
-* Networking feels very authentic (within the company, not in SF)
+### Intern specific
 
-Intern specific:
+<details>
+<summary><strong>Treated as a real employee</strong></summary>
+<ul><li>As an intern at a startup, your work is genuinely needed. Once you get onboarded, you will also be expected to build, own, and maintain code/systems that you create.
+</details>
 
-* You're a real employee. Your work is needed
+<details>
+<summary><strong>Random Benefits</strong></summary>
+<ul><li>Because you are basically a full time, real employee, you might be able to have some fun adventures at the expense of your startup. For example, using the company card to go to a convention or getting a DoorDash or wellness benefit that the full time employees also have.
+</details>
 
-* You have more freedom than a larger company. Like using the company card or being able to get some FT benefits.
+### Full time specific
 
-Full time specific:
+<details>
+<summary><strong>Expressing Company Direction</strong></summary>
+<ul><li>Startups generally have more freedom to express your own ideas and turn them into a reality. As a full time employee, if you have the bandwidth to make something on top of your regular work, you could pitch, develop, and give birth to something entirely new that you came up with.
+</details>
 
-* Title inflation (depending how you look at it)
+<details>
+<summary><strong>Title Inflation</strong></summary>
+<ul><li>You might have the same title as someone who would be 5 levels higher than you at a big tech company. This is something small but could be something cool.
+</details>
 
-* So much freedom, so many casual events, and surrounded by younger people who like to work hard and get lit (sometimes).
+<details>
+<summary><strong>Fun Events</strong></summary>
+<ul><li>There is generally a "work hard, play hard" mentality. It can be lit.
+</details>
 
 ## 3. Cons of a startup
 
-As an intern:
+### General Cons
 
-* If its your junior year internship, it might be harder to get a full time big tech job if you decide you don't like startups and you're not coming from a big tech background. Key words: **it might be**. It's definitely doable.
+<details>
+<summary><strong>Work Life Balance</strong></summary>
+<ul><li>It's no secret that people who work at startups work a lot. This can be a slippery slope sometimes. If you are someone who struggles with work life balance, or is scared about not having one at a startup, I would suggest trying to plan out some boundaries of time that work can absolutely not creep into.
+</details>
 
-* Less work life balance, but you're still an intern so like no one really expects you to be putting in crazy hours. (Although you might be inclined to sacrifice your own work life balance because you see people around you at the startup do the same as an intern. Beware, its a slippery slope.)
+### Intern Specific
 
-As a full time employee:
+<details>
+<summary><strong>Junior Year Internship</strong></summary>
+<ul><li>If its your junior year internship, it might be harder to get a full time big tech job if you decide you don't like startups and you're not coming from a big tech background. Key words: <b>it might be</b>. It's definitely doable.
+</details>
 
-* Less work life balance
-* Less job security
-* Equity could be worth nothing
+### Full Time Specific
+
+<details>
+<summary><strong>Less Job Security</strong></summary>
+<ul><li>The existence of your job might depend on how well you do. Sometimes, startups don't even know if they're going to be around in a few months.
+</details>
+
+<details>
+<summary><strong>Higher Risk Equity</strong></summary>
+<ul><li>Your options/equity in a startup could be worth nothing in the long run if the company never exits or has a liquidation event. It's high risk, high reward.
+</details>
 
 ## 4. Startup vs big tech
 
-* Startup org structure
-* More ownership at a startup
-* Less beauracracy at a startup
-* More freedom at a startup
-* More influence at a startup
-* More work to be hard a startup
-* Less work life balance overall
+### At a glance
+
+| Startup | Big Tech |
+|---------|----------|
+| ✅ Flat org structure | ❌ Layers of management |
+| ✅ High ownership of features/systems | ❌ Narrow scope, specialized roles |
+| ✅ Minimal bureaucracy | ❌ More processes and approvals |
+| ✅ High degree of freedom | ❌ More structured guidelines |
+| ✅ Greater individual influence | ❌ Harder to make impact |
+| ⚠️ More work expected | ✅ More defined scope |
+| ⚠️ Less work-life balance | ✅ Better work-life balance |
+
+Note: this table is generalizing, there will always be exceptions.
+
+### Which one is for you?
+
+Honestly, there is no bad choice and the grass will look greener on the other side regardless. Big Tech workers might want to join a startup for the higher impact work, higher ownership, and less bureaucracy. Startup workers might want the better work life balance, more certain career path, and guaranteed prestige. It also depends heavily on the companies.
 
 ## 5. Getting into startups
 
-* Networking
-* The YC website
-* Cold emailing
-  * Probably a little note about how holistic background matters. Keep it real and how startup people are looking for driven people with interesting backgrounds.
-* Events like greylock's techfair
-* See starting your own
+### Networking
+
+In life it's not about what you know, its about *who* you know. This applies even more with startups. If you have a good rep with one of the engineers or even the CEO, a referral at a startup can go a long way, especially if the startup only hires on referral basis.
+
+### Other tactics
+
+<details>
+<summary><strong>Cold Emails</strong></summary>
+<ul><li>I met a few vercel interns over the Summer of 2026 and all of them said that they got their internship through a cold email or Twitter DM. Cold emailing startup founders shows that you are hungry and driven. It will give a good chance of getting eyes on your resume if you word it correctly.
+<li>Some tips on cold emailing:
+<ul>
+<li>Come across as genuine
+<li>Keep your emails short
+<li>Don't ask for a referral, ask for a quick chat
+<li>Summarize your key background experience and why you're interested in their startup.
+</details>
+
+<details>
+<summary><strong>YC</strong></summary>
+<ul><li>You can apply to intern at YC companies <a href="https://www.ycombinator.com/internships">here</a>.
+</details>
+
+<details>
+<summary><strong>Events</strong></summary>
+<ul>
+<li><a href="https://www.startupschool.org/">YC Startup School</a>
+<li><a href="https://greylock.com/jobs/">Greylock Techfair (usually in the summer and sign ups are not publicly posted)</a>
+<li><a href="https://www.innovation.pitt.edu/ii/">Innovation Center @ Pitt</a>
+<li><a href="https://www.bigidea.pitt.edu/">Big Idea Center @ Pitt</a>
+</details>
+
+<details>
+<summary><strong>Starting your own</strong></summary>
+<ul><li>See section below on starting your own startup.
+</details>
 
 ## 6. Starting your own startup
 
 It's not about the idea... well it is... but its mainly how many times you can try an idea, fail, then try again.
 
+### Should I found?
+
+Honestly, no one but yourself should be able to answer that question. Founding is an arduous journey and even successful founders make many sacrifices (relationships, time, physical health) to become successful. It could be super rewarding.
+
+Founding has the highest risk, but the highest reward (in terms of money)
+
+![Risk Reward of Founding, Startups, and Big Tech](https://i.ibb.co/rGkvT1Lz/Reward-Potential.pngz)
+
+### Who do I found with?
+
+Roommates are a good option. Anyone that you like generally and can work with. A good way to figure out if you can work with someone is to do a Hackathon with them.
+
+Beware of founder breakups though. Founding can put a lot of stress on the relationship between co-founders, and it is not uncommon for founders to "break up" and ruin the actual relationship between the once previous friends.
+
+### How do I start?
+
+In the same vein of making a personal project, you need to try and make something that solves a problem, usually a problem that you experience in your own life.
+
+You can figure out if other people experience the same problem by creating a waitlist and seeing how much traction that gets.
+
+Once you build your MVP and gain some traction, you can start applying for funding.
+
 ## 7. Funding
 
-TODO: Add more i can't think of anymore off the top of my head :(
+I am going to be completely honest, this is outside of my expertise. Funding is not an easy task. Usually, founders in accelerate programs like YC have easier times funding.
 
-* YC
-* Pitt Innovation center
+There are caveats with funding, such as where the venture capitalist is located. Generally, you want to find one that is located in SF, as you might be restricted to the location where your VC is.
 
+Also, consider the fact that you might not need VC money to operate your company. If your product is gaining revenue and you can reinvest that back into the product, that could help it grow.
+
+There's a saying that VC money is rocket fuel. When you have VC money, they expect you to spend it to grow your company and beat out the competition.
 
 ## 8. Startup lingo
 
-Funding rounds
+<details>
+<summary><strong>Seed Round, Pre-Seed Round</strong></summary>
 
-* Series A, B, C...
-* Seed round, pre-seed round
-* Options
-* Runway
-* Burn
+**Pre-Seed:** The earliest stage of funding, often from founders' own money, friends and family, or angel investors. Companies typically raise $50k-$500k to validate their idea and build an MVP.
 
-## How Startups Differ from Traditional Internships
+**Seed Round:** The first official round of venture funding, usually $500k-$3M, used to prove product-market fit and achieve initial growth. Companies typically have a working product and some early users/revenue.
 
-### Internship vs Startup Role
+</details>
 
-A traditional internship is typically structured with:
-- Clear mentorship and learning objectives
-- Defined projects with bounded scope
-- Established processes and guidelines
-- Time to learn without immediate pressure to deliver
-- Rotation through different teams or projects
+<details>
+<summary><strong>Series A, B, C...</strong></summary>
 
-A startup, whether as an intern or full-time employee, is different:
-- You're expected to contribute meaningfully from day one
-- Projects are often undefined or constantly evolving
-- You'll wear multiple hats and work across disciplines
-- There's urgency—the company's survival may depend on your work
-- Mentorship is often limited (founders and senior staff are stretched thin)
-- You learn by doing, sometimes with limited guidance
+Series A is the first major round of institutional venture capital funding (typically $2M-$15M) after seed funding. Series B, C, D, etc. represent subsequent funding rounds as the company grows and scales. Each round typically involves raising more money at a higher valuation as the company hits key milestones.
 
-**The upside:** You'll gain real-world experience, ship products, and see the direct impact of your work. You'll also develop problem-solving skills and independence faster than in a traditional internship.
+</details>
 
-**The downside:** You might feel overwhelmed, unsupported, or uncertain about whether you're on the right track. There's less structure and fewer safety nets.
+<details>
+<summary><strong>Options (Stock Options)</strong></summary>
 
-## How Startups Differ from Big Tech
+Stock options give employees the right to buy company shares at a fixed price (the "strike price"). If the company's value increases, you can buy shares at the old lower price and potentially profit. Options typically vest over 4 years with a 1-year cliff, meaning you need to stay at least a year to get any, then earn them gradually.
 
-### The Big Tech Experience
+</details>
 
-At companies like Google, Microsoft, Meta, or Amazon:
-- Clear career progression and levels
-- Established mentorship programs
-- Well-defined projects with clear requirements
-- Ample resources (tools, infrastructure, team support)
-- Strong focus on code quality, testing, and best practices
-- Collaborative code reviews and architectural discussions
-- Stable compensation and benefits
-- Learning from top engineers in the field
+<details>
+<summary><strong>Burn Rate</strong></summary>
 
-### The Startup Experience
+Burn rate is how much money your startup is spending (losing) per month, usually measured as monthly expenses minus revenue. For example, if you spend $100k/month and make $20k in revenue, your burn rate is $80k/month. You're typically "burning" VC money to grow faster than revenue alone would allow.
 
-Startups operate very differently:
-- **Flat hierarchy:** You might report directly to the CTO or founder. Decision-making is faster but can be chaotic.
-- **Undefined scope:** You might start working on feature X but pivot to feature Y mid-sprint. Flexibility is key.
-- **Autonomy:** You have more independence but also more responsibility. There's less handholding.
-- **Speed over perfection:** "Done" often trumps "perfect." You'll ship code before it feels ready.
-- **Broader skill set:** You'll work on frontend, backend, DevOps, design, or even marketing—not just your specialty.
-- **Limited resources:** You'll solve problems creatively with less infrastructure and fewer tools.
-- **Direct impact:** Your work directly affects whether the company succeeds or fails. This can be motivating or stressful (often both).
+</details>
 
-### Comparison Table
+<details>
+<summary><strong>Runway</strong></summary>
 
-| Aspect | Big Tech | Startup |
-|--------|----------|---------|
-| Career clarity | Clear levels and progression | Often unclear |
-| Project definition | Well-defined | Evolving, sometimes undefined |
-| Mentorship | Strong programs | Minimal, self-directed |
-| Work-life balance | Varies, but generally manageable | Often long hours |
-| Learning | Deep dives into specialties | Broad exposure to many areas |
-| Stability | Very stable | Highly uncertain |
-| Impact | Part of large systems | Direct, visible impact |
-| Compensation | Very competitive | Often lower (but equity possible) |
+Runway is how many months your startup can operate before running out of money at your current burn rate. For example, with $1M in the bank and $100k/month burn, you have 10 months of runway.
 
-## Why Work at a Startup?
-
-### Reasons to consider a startup:
-
-**1. Learning and Growth**
-- You'll learn faster by doing more and solving diverse problems
-- You'll understand how entire products and companies work, not just one component
-- You'll gain skills in areas you didn't expect (product thinking, business acumen, cross-functional collaboration)
-
-**2. Direct Impact**
-- Your work matters. You can see the results of your coding in production within hours
-- You're building something from the ground up, not maintaining legacy systems
-- You can influence product direction and company decisions
-
-**3. Equity**
-- Many startups offer stock options or equity grants
-- If the company succeeds, this can be extremely valuable
-- It's a way to share in the company's upside
-
-**4. Resume Building**
-- Employers love to see early-stage startup experience
-- It demonstrates resourcefulness, adaptability, and initiative
-- You can claim credit for significant features or systems
-
-**5. Network**
-- Early-stage startups often have tight-knit teams that become lifelong networks
-- You'll interact with founders, investors, and other entrepreneurs
-- These relationships can lead to future opportunities
-
-### Reasons to be cautious:
-
-**1. Uncertainty**
-- The company might fail. Startups have a high failure rate
-- Your role and responsibilities might change constantly
-- Job security is uncertain
-
-**2. Burnout**
-- Startup culture can glorify long hours and grinding
-- You might be expected to do the work of 2-3 people
-- Without clear boundaries, it's easy to overcommit
-
-**3. Limited Learning Structure**
-- You might learn bad practices if there's no one to mentor you
-- You could miss out on deep technical knowledge in your specialty
-- Without established best practices, you might form poor habits
-
-**4. Compensation**
-- Salary is often lower than big tech
-- Equity might be worthless if the company fails
-- Benefits are usually minimal
-
-## How to Find and Join a Startup
-
-### Where to Find Startups
-
-**1. Job boards and listings**
-- **AngelList (Wellfound)** - The primary startup job board. Browse by industry, funding stage, and location
-- **Y Combinator's job board** - YC-backed companies (highly vetted)
-- **Crunchbase** - Find companies by funding stage, industry, and investor
-- **LinkedIn** - Filter by company size (1-50 employees) and industry
-- **Handshake** - Pitt's job board has startup listings
-
-**2. Networking**
-- **Attend startup events** - Pitch competitions, startup showcases, tech meetups
-- **Connect with founders on LinkedIn** - Many founders actively recruit on LinkedIn
-- **Pitt entrepreneurship community** - Talk to fellow students launching companies
-- **Accelerators and incubators** - Many are actively hiring
-
-**3. Cold outreach**
-- Find startups you're interested in via Crunchbase or news
-- Identify engineers or the CTO on LinkedIn
-- Send a thoughtful message explaining why you're interested in their mission
-- Many startups don't advertise but will make exceptions for strong candidates
-
-### How to Evaluate a Startup
-
-Before committing, evaluate these factors:
-
-**1. The Product**
-- Does it solve a real problem?
-- Who are the customers?
-- Is there demand or traction?
-- Can you get excited about it?
-
-**2. The Team**
-- What's the background of the founders? (Previous startups? Corporate experience?)
-- Do they have a technical co-founder?
-- Is the team passionate about the problem?
-- Will you respect and learn from these people?
-
-**3. Funding and Runway**
-- How much money do they have? (This affects job security)
-- How long can they operate with current burn rate?
-- Have they raised from reputable investors?
-- Is there a path to profitability or additional funding?
-
-**4. Your Role**
-- What will you actually be doing?
-- Are responsibilities clear or very vague?
-- Will you have mentorship or will you be learning on your own?
-- Is the scope reasonable or are they expecting 5 people's work from you?
-
-**5. Culture and Expectations**
-- What's the expected work schedule?
-- Do they value work-life balance or glorify grinding?
-- What's the equity arrangement? (This matters for co-founders and early employees)
-- Do their values align with yours?
-
-### Red Flags to Watch For
-
-- Founder(s) won't clearly explain the business model or go-to-market strategy
-- Very high turnover among engineers
-- Vague job descriptions and responsibilities
-- Pressure to commit without learning details
-- No clear technical leadership
-- Founding team conflicts or dysfunction
-- Unrealistic timelines or milestones
-- "We'll figure it out as we go" with no plan whatsoever
-
-## Tips for Success at a Startup
-
-### 1. Be proactive
-- Don't wait for directions. Identify problems and solve them
-- Ask for feedback frequently
-- Take initiative on tasks beyond your job description
-
-### 2. Communicate clearly
-- Over-communicate with your team
-- Write things down (docs, Slack threads) because context is easy to lose
-- Ask questions if requirements are unclear
-
-### 3. Embrace change
-- Plans will change. Projects will pivot. Get comfortable with it
-- View it as a learning opportunity, not a frustration
-- Be flexible in your role and responsibilities
-
-### 4. Prioritize ruthlessly
-- You can't do everything. Focus on what moves the needle
-- Ask your manager/founder: "What's most important right now?"
-- Say no to low-impact work
-
-### 5. Document what you do
-- Keep a record of your achievements and impact
-- This will be valuable for future job applications or equity negotiations
-- Helps the team understand what happened if people turn over
-
-### 6. Set boundaries
-- It's easy to work 60-hour weeks at a startup
-- Be intentional about your work-life balance
-- Burnout helps no one (especially not the startup)
-
-### 7. Learn the business
-- Understanding the market, customers, and business model makes you better at your job
-- Ask founders about strategy and metrics
-- Think about the product from a customer and business perspective
-
-## Resources
-
-Unironically some of these aren't bad
-TODO: Fix this
-
-### Startup Job Boards
-- **AngelList (Wellfound)** - https://wellfound.com/
-- **Y Combinator Job Board** - https://www.ycombinator.com/jobs
-- **Crunchbase** - https://www.crunchbase.com/
-- **LinkedIn** - Filter by company size
-
-### Learning About Startups
-- **Lean Startup** by Eric Ries - Classic book on startup methodology
-- **The Hard Thing About Hard Things** by Ben Horowitz - Founders' perspective on challenges
-- **Crunchbase News** - Industry news and funding announcements
-- **Startup podcasts** - How I Built This, The Podium, etc.
-
-### Pitt Resources
-- **Pitt Innovation Institute** - https://innovation.pitt.edu/
-- **Business Plan Competition** - Network with student entrepreneurs
-- **Handshake** - Pitt's job platform with startup listings
-- **Career Services** - For startup-specific career advising
-
-### Networking
-- **Startup events in Pittsburgh** - AlliancePittsburgh, TechCrunch Disrupt, local pitch competitions
-- **Meetup.com** - Find local startup and tech groups
-- **Twitter/X** - Follow founders, VCs, and startup communities
-
-## Final Thoughts
-
-TODO: Add final thoughts
+</details>
