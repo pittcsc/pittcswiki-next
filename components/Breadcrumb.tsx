@@ -14,7 +14,10 @@ const formatBreadcrumbText = (text: string): string => {
     .replace(".mdx", "")
     .replace(".md", "")
     .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      if (word.toLowerCase() === "csc") return "CSC"
+      return word.charAt(0).toUpperCase() + word.slice(1)
+    })
     .join(" ")
 }
 
