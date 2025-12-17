@@ -3,6 +3,7 @@
 const simpleGit = require("simple-git")
 const fs = require("fs").promises
 const path = require("path")
+const matter = require("gray-matter")
 
 const git = simpleGit()
 const guidesDir = path.join(process.cwd(), "data/guides")
@@ -291,21 +292,23 @@ async function generateMetadata() {
 
       try {
         const fileContent = await fs.readFile(filePath, "utf-8")
+        const { data: frontmatter } = matter(fileContent)
         const wordCount = countWords(fileContent)
         const readingTime = calculateReadingTime(wordCount)
         const gitData = await getGitMetadata(filePath)
 
         metadata[guideId] = {
           path: relativePath,
-          author: gitData.author,
+          author: frontmatter.author || gitData.author,
           authorEmail: gitData.authorEmail,
-          originalAuthor: gitData.originalAuthor || gitData.author,
+          originalAuthor:
+            frontmatter.author || gitData.originalAuthor || gitData.author,
           originalAuthorEmail:
             gitData.originalAuthorEmail || gitData.authorEmail,
           updaters: gitData.updaters || [],
           updaterEmails: gitData.updaterEmails || [],
           lastModified: gitData.lastModified,
-          created: gitData.created,
+          created: frontmatter.date || gitData.created,
           wordCount,
           readingTime,
           commits: gitData.commits,

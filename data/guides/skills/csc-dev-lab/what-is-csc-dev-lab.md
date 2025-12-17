@@ -1,5 +1,7 @@
 ---
 title: "[DL] What is CSC Dev Lab"
+author: "Shreyash Ranjan"
+date: "2025-12-17"
 ---
 
 So, you want to be a Software Engineer? Or maybe a PM, or a UI/UX designer? That's awesome.

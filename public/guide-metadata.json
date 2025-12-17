@@ -1,9 +1,9 @@
 {
   "guide-academics/applying-to-graduate-school": {
     "path": "academics/applying-to-graduate-school",
-    "author": "Steven Jarmell",
+    "author": "James Hahn, Katelyn Morrison",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "James Hahn, Katelyn Morrison",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -43,9 +43,9 @@
   },
   "guide-academics/majors/comp-bio": {
     "path": "academics/majors/comp-bio",
-    "author": "Steven Jarmell",
+    "author": "Tao Sheng",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Tao Sheng",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -57,9 +57,9 @@
   },
   "guide-academics/majors/dnid": {
     "path": "academics/majors/dnid",
-    "author": "Steven Jarmell",
+    "author": "Alexander Grattan and Crystal Li",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Alexander Grattan and Crystal Li",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -71,9 +71,9 @@
   },
   "guide-academics/minors/stats": {
     "path": "academics/minors/stats",
-    "author": "Steven Jarmell",
+    "author": "Alex Zharichenko",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Alex Zharichenko",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -85,9 +85,9 @@
   },
   "guide-academics/prospective/coe-vs-cs": {
     "path": "academics/prospective/coe-vs-cs",
-    "author": "Steven Jarmell",
+    "author": "Pat Gardner",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Pat Gardner",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -113,9 +113,9 @@
   },
   "guide-academics/prospective/infosci-vs-cs": {
     "path": "academics/prospective/infosci-vs-cs",
-    "author": "Steven Jarmell",
+    "author": "Andrea Michael",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Andrea Michael",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -127,9 +127,9 @@
   },
   "guide-academics/prospective/transfer-students": {
     "path": "academics/prospective/transfer-students",
-    "author": "Steven Jarmell",
+    "author": "Joshua Spisak",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Joshua Spisak",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -201,8 +201,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1340,
@@ -215,8 +219,12 @@
     "authorEmail": "56934841+codingshreyash@users.noreply.github.com",
     "originalAuthor": "Shreyash Ranjan",
     "originalAuthorEmail": "56934841+codingshreyash@users.noreply.github.com",
-    "updaters": ["David"],
-    "updaterEmails": ["136610493+dvdzs8@users.noreply.github.com"],
+    "updaters": [
+      "David"
+    ],
+    "updaterEmails": [
+      "136610493+dvdzs8@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 2171,
@@ -225,23 +233,27 @@
   },
   "guide-academics/succeed-in-course-x/succeed-in-1501": {
     "path": "academics/succeed-in-course-x/succeed-in-1501",
-    "author": "Steven Jarmell",
+    "author": "Nathan Barta",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Nathan Barta",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": [],
-    "updaterEmails": [],
+    "updaters": [
+      "liambrem"
+    ],
+    "updaterEmails": [
+      "liam.e.brem@gmail.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 2060,
+    "wordCount": 2157,
     "readingTime": 11,
-    "commits": 3
+    "commits": 4
   },
   "guide-academics/succeed-in-course-x/succeed-in-401": {
     "path": "academics/succeed-in-course-x/succeed-in-401",
-    "author": "Steven Jarmell",
+    "author": "Rohaan Wasim",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Rohaan Wasim",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -253,9 +265,9 @@
   },
   "guide-academics/succeed-in-course-x/succeed-in-441": {
     "path": "academics/succeed-in-course-x/succeed-in-441",
-    "author": "Steven Jarmell",
+    "author": "Dylan Feehan",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Dylan Feehan",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -267,17 +279,25 @@
   },
   "guide-academics/uta": {
     "path": "academics/uta",
-    "author": "Steven Jarmell",
+    "author": "Gordon Lu",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Gordon Lu",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan",
+      "Denys Tsinyk",
+      "liambrem"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com",
+      "denystsinyk@gmail.com",
+      "liam.e.brem@gmail.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 862,
-    "readingTime": 5,
-    "commits": 4
+    "wordCount": 1343,
+    "readingTime": 7,
+    "commits": 6
   },
   "guide-career/career-fair": {
     "path": "career/career-fair",
@@ -285,8 +305,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1888,
@@ -327,8 +351,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 347,
@@ -341,8 +369,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 209,
@@ -407,9 +439,9 @@
   },
   "guide-career/team-matching": {
     "path": "career/team-matching",
-    "author": "Steven Jarmell",
+    "author": "Mathew Varughese",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Mathew Varughese",
     "originalAuthorEmail": "sjj27@pitt.edu",
     "updaters": [],
     "updaterEmails": [],
@@ -453,13 +485,31 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 677,
     "readingTime": 4,
     "commits": 4
+  },
+  "guide-skills/csc-dev-lab/what-is-csc-dev-lab": {
+    "path": "skills/csc-dev-lab/what-is-csc-dev-lab",
+    "author": "Shreyash Ranjan",
+    "authorEmail": "56934841+codingshreyash@users.noreply.github.com",
+    "originalAuthor": "Shreyash Ranjan",
+    "originalAuthorEmail": "56934841+codingshreyash@users.noreply.github.com",
+    "updaters": [],
+    "updaterEmails": [],
+    "lastModified": "2025-12-17T13:43:20.000Z",
+    "created": "2025-12-17",
+    "wordCount": 515,
+    "readingTime": 3,
+    "commits": 1
   },
   "guide-skills/external-resources": {
     "path": "skills/external-resources",
@@ -467,8 +517,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 110,
@@ -519,11 +573,15 @@
   },
   "guide-skills/getting-started-with-x/hackathons": {
     "path": "skills/getting-started-with-x/hackathons",
-    "author": "Steven Jarmell",
+    "author": "Alex Zharichenko",
     "authorEmail": "sjj27@pitt.edu",
-    "originalAuthor": "Steven Jarmell",
+    "originalAuthor": "Alex Zharichenko",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["braynguyen", "Brayden Nguyen", "Shreyash Ranjan"],
+    "updaters": [
+      "braynguyen",
+      "Brayden Nguyen",
+      "Shreyash Ranjan"
+    ],
     "updaterEmails": [
       "btn16@pitt.edu",
       "112491386+braynguyen@users.noreply.github.com",
@@ -597,8 +655,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1270,
@@ -611,8 +673,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1805,
@@ -625,8 +691,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1726,
@@ -639,8 +709,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1326,
@@ -653,8 +727,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 1154,
@@ -667,8 +745,12 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": ["Shreyash Ranjan"],
-    "updaterEmails": ["56934841+codingshreyash@users.noreply.github.com"],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 318,
