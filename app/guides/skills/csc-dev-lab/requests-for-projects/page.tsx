@@ -90,7 +90,7 @@ export default function RequestsForProjectsPage() {
 
   return (
     <div className="article-container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Breadcrumb slug="guides/skills/requests-for-projects" />
+      <Breadcrumb slug="guides/skills/csc-dev-lab/requests-for-projects" />
 
       <main className="mt-8">
         {/* Header */}
