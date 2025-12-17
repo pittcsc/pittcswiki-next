@@ -4,50 +4,46 @@ author: "Shreyash Ranjan"
 date: "2025-12-17"
 ---
 
-So, you want to be a Software Engineer? Or maybe a PM, or a UI/UX designer? That's awesome.
+Getting an internship requires two things: passing the interview and having a resume that gets you the interview.
 
-You've probably heard the advice a million times: **"Just build projects."**
+Most advice focuses on the interview - LeetCode, behavioral prep, and mock interviews. This is necessary, but it’s not enough. To get the interview, you need to show you can actually build software.
 
-It's the golden rule of landing an internship. ["Zero to Offer"](/guides/zero-to-offer) says 100X times. Every person in industry will mention it. But let's be real for a second - it is _so much_ easier said than done.
+The standard advice is "build side projects." This works, but it’s harder than it sounds.
 
-## The "Just Build Projects" Trap
+## The Reality of Side Projects
 
-You sit down, open your IDE, and... blank stare.
+Building a project alone in your dorm room is a good start, but it has limits.
 
-- **"What do I even build?"** Clone Spotify? A To-Do list? It feels generic.
-- **"How do I start?"** The tech stack is overwhelming. React, Next.js, Tailwind, databases... it's a lot to manage on top of your classes.
-- **"I'm stuck."** You hit a bug, get frustrated and give up. It used to be that you'd spend 4 hours on Stack Overflow, and at least learn something. But now, you'd just copy-paste some AI code to make it work.
+When you work solo, you miss the complexity of real engineering. You don't have to read other people's code, handle merge conflicts, or design architecture that scales beyond a single user. You inevitably get stuck on configuration or specific bugs, and without a team, it’s easy to abandon the project entirely.
 
-Did you really learn anything? Did you ship something real users will touch? Often, the answer is no. And that's okay! It's hard to simulate a real engineering environment by yourself in your dorm room.
+We often see students with "To-Do List" apps or unmaintained clones on their resume. These don't stand out to recruiters who are looking for evidence that you can work on a professional software team.
 
-## Bringing CS Back to CSC
+## Engineering > Coding
 
-For a long time, CSC has been incredible at career advice. We've mastered the art of the [resume](/guides/career/resume), the [behavioral interview](/guides/zero-to-offer/ace-your-interview), and [how to pass technicals](/guides/career/study-plan). But somewhere along the way, we drifted a bit from the core of it all: **Computer Science.**
+CSC has historically excelled at the career game - our ["Zero to Offer"](/guides/zero-to-offer) guide is proof. Now, we are doubling down on the core of our major: **Computer Science**.
 
-We want to change that. We want to bring the focus back to building, creating, and engineering. We want to foster the next generation of:
+CSC Dev Lab brings the "engineering" back to the club. We are fostering a community of:
 
-- **Software Engineers** who write clean, scalable code.
-- **UI/UX Designers** who craft intuitive and beautiful experiences.
-- **Product Managers** who drive vision and execution.
-- **DevOps Engineers** who keep the ship running smoothly.
-- **and more**
+-   **Software Engineers** building robust, scalable systems.
+-   **UI/UX Designers** creating intuitive user experiences.
+-   **Product Managers** driving features from idea to launch.
+-   **DevOps Engineers** automating deployment and infrastructure.
 
-## CSC Dev Lab
+## What is Dev Lab?
 
-CSC Dev Lab is our answer to the "just build projects" struggle.
+CSC Dev Lab is a semester-long program that simulates a real internship environment.
 
-We aren't just throwing you into a hackathon, like [SteelHacks](/guides/skills/getting-started-with-x/hackathons#steelhacks), and wishing you luck. We are building a structured environment where you work in **real agile teams** on **real projects** that **real people** will use.
-
-Think of it as your first internship, before your first internship.
+You aren't hacking together a prototype in 24 hours like at [SteelHacks](/guides/skills/getting-started-with-x/hackathons#steelhacks). You are joining a structured team to build and ship software for the Pitt community.
 
 ### How it Works
 
-1.  **Collaborative Growth:** You're never stuck alone. Your Team Lead and peers are there to debug with you, review your PRs, and help you level up your skills.
-2.  **Real Tech Stacks:** We're building pretty cool projects (check out [Requests for Projects](/guides/skills/csc-dev-lab/requests-for-projects)). We choose modern tech stacks that are best for the project but also highly applicable to your next internship or job.
-3.  **Actual Impact:** We're building software for the Pitt community and beyond. We hope this not only inspires you as a developer but also helps CSC emerge as the hub of the best engineers on campus.
+1.  **Agile Workflow:** We treat this like a job. You work in sprints, manage tickets on a Kanban board, and submit pull requests (PRs). You learn the process before you start your first internship.
+2.  **Collaborative Growth:** You work alongside Team Leads and peers. When you get stuck, you have immediate support to debug the issue and keep moving. Code reviews ensure you write clean, maintainable code.
+3.  **Real Tech Stacks:** We use industry-standard tools. Check out our [Requests for Projects](/guides/skills/csc-dev-lab/requests-for-projects) to see what we're building. You'll learn the frameworks and languages you'll actually use in your career.
+4.  **Actual Impact:** Your code ships to real users. We are building the digital infrastructure for CSC and Pitt, making you a key part of the best engineering hub on campus.
 
 ### Why Join?
 
-Because the best way to learn isn't by watching a tutorial; it's by doing. It's by breaking things, fixing them with your team, and seeing your work go live.
+This is the bridge between coursework and your career. You walk away with a deployed project, a network of engineers, and the confidence that you can contribute to a professional codebase from day one.
 
-CSC Dev Lab is here to make you not just a better candidate, but a better engineer.
+CSC Dev Lab makes you a better engineer.
