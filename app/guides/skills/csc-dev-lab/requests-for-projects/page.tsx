@@ -82,7 +82,7 @@ export default function RequestsForProjectsPage() {
     {
       title: "Pitt2Pit Travel Share",
       description:
-        "Rides to the airport (PIT) are expensive for students. Pitt2Pit helps students coordinate travel pooling during peak times like Thanksgiving, Winter, and Spring breaks. Users input their flight times, and the algorithm groups them into optimal 'pods' to split Uber/Lyft costs or organize carpools. It solves the fragmented coordination that currently happens in random group chats.",
+        "Rides to the airport (PIT) can be expensive. Pitt2Pit helps students coordinate travel pooling during peak times (Thanksgiving, Winter, Spring breaks) by grouping users into optimal 'pods' to split Uber/Lyft costs or organize carpools. We understand the 28X Flyer serves this purpose, but sometimes you'd rather travel in comfort and spend less time on an already long commute. This is just the beginning - the platform could expand to other car-dependent trips like Costco runs, allowing students to pair with drivers and share costs.",
       tags: ["Matching Algorithm", "Social Graph", "Cost Sharing"],
       formLink: "https://forms.google.com/your-form-url",
     },
