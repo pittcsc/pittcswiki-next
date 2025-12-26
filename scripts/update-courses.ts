@@ -1,6 +1,7 @@
 import * as fs from "fs"
 import * as path from "path"
 import * as cheerio from "cheerio"
+import { CourseInfoData } from "../data/CourseInfoData"
 
 // Types matching the existing data structure
 type TermsOffered = {
@@ -40,8 +41,17 @@ async function fetchPage(url: string): Promise<string> {
 
 async function scrapeCourses() {
   console.log("Fetching course list...")
+  const basePageHtml = await fetchPage(BASE_URL)
   const mainPageHtml = await fetchPage(COURSES_URL)
   const $ = cheerio.load(mainPageHtml)
+
+  const currentSemester = (() => {
+    const semesterHeader = cheerio.load(basePageHtml)("h1").first().text()
+
+    if (semesterHeader.includes("Fall")) return "FALL"
+    if (semesterHeader.includes("Spring")) return "SPRING"
+    if (semesterHeader.includes("Summer")) return "SUMMER"
+  })()
 
   const courseLinks: string[] = []
 
@@ -62,6 +72,8 @@ async function scrapeCourses() {
   console.log(`Found ${uniqueLinks.length} potential courses.`)
 
   const courses: CourseData[] = []
+
+  let courseIndex = 0
 
   for (const link of uniqueLinks) {
     const fullUrl = `${BASE_URL}${link}`
@@ -129,11 +141,13 @@ async function scrapeCourses() {
       )
       const requirements = reqMatch ? reqMatch[1].trim() : ""
 
+      while (CourseInfoData.courses[courseIndex].id != id) courseIndex++
+
       // Extract Terms Offered
       const termsOffered: TermsOffered = {
-        FALL: false,
-        SPRING: false,
-        SUMMER: false,
+        FALL: CourseInfoData.courses[courseIndex].terms_offered.FALL,
+        SPRING: CourseInfoData.courses[courseIndex].terms_offered.SPRING,
+        SUMMER: CourseInfoData.courses[courseIndex].terms_offered.SUMMER,
       }
 
       const currentSectionsText = $detail('h2:contains("Current Sections")')
@@ -142,8 +156,11 @@ async function scrapeCourses() {
         .toUpperCase()
 
       if (currentSectionsText.includes("FALL")) termsOffered.FALL = true
+      else if (currentSemester == "FALL") termsOffered.FALL = false
       if (currentSectionsText.includes("SPRING")) termsOffered.SPRING = true
+      else if (currentSemester == "SPRING") termsOffered.SPRING = false
       if (currentSectionsText.includes("SUMMER")) termsOffered.SUMMER = true
+      else if (currentSemester == "SUMMER") termsOffered.SUMMER = false
 
       // Extract Instructors
       // Look for td elements with headers starting with "instructors-"
