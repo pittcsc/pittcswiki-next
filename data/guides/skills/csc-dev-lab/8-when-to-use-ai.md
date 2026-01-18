@@ -1,5 +1,5 @@
 ---
-title: "[DevLab] 7. When to Use AI"
+title: "[DevLab] 8. When to Use AI"
 author: "Shreyash Ranjan"
 date: "2025-12-17"
 search_tags:
