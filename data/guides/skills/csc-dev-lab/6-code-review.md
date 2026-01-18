@@ -1,5 +1,5 @@
 ---
-title: "[DevLab] 5. Code Review Best Practices"
+title: "[DevLab] 6. Code Review Best Practices"
 author: "Claude Sonnet 4.5"
 date: "2025-01-14"
 search_tags:

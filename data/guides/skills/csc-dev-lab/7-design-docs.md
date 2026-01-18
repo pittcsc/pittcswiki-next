@@ -1,5 +1,5 @@
 ---
-title: "[DevLab] 6. Writing Design Docs"
+title: "[DevLab] 7. Writing Design Docs"
 author: "Claude Sonnet 4.5"
 date: "2025-01-14"
 search_tags:
