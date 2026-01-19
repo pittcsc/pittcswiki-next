@@ -1,6 +1,6 @@
 ---
 title: "[DevLab] 4. Agile & Project Management"
-author: "Claude Sonnet 4.5"
+author: "Shreyash Ranjan"
 date: "2025-01-14"
 search_tags: ["agile", "scrum", "sprint", "kanban", "project management", "software development", "team", "devlab"]
 ---

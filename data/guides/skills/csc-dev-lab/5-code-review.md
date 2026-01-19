@@ -1,6 +1,6 @@
 ---
 title: "[DevLab] 5. Code Review Best Practices"
-author: "Claude Sonnet 4.5"
+author: "Shreyash Ranjan"
 date: "2025-01-14"
 search_tags: ["code review", "pull request", "pr", "github", "collaboration", "feedback", "devlab"]
 ---

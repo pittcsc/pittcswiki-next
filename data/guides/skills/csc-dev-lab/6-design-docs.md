@@ -1,6 +1,6 @@
 ---
 title: "[DevLab] 6. Writing Design Docs"
-author: "Claude Sonnet 4.5"
+author: "Shreyash Ranjan"
 date: "2025-01-14"
 search_tags: ["design doc", "technical design", "TDD", "technical design document", "RFC", "architecture", "planning", "documentation", "devlab"]
 ---
